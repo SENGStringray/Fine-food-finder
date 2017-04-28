@@ -7,7 +7,7 @@ def display_restaurant(name, restaurant_names):
 	#find match in array of restaurant names
 	if name in restaurant_names:
 		#display page
-		filename = "Restaurants/%s" % name
+		filename = "../Restaurants/%s" % name
 		#file = open(filename,"r") #read file
 		with open(filename) as file:
 			for line in file:
