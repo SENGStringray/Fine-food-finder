@@ -432,11 +432,11 @@ Trading hours:
    Sunday: 11:30 – 22:00
 Phone : (02) 8347 0733
 Email : 
-Menu: salad, risotto, pasta, pizza, seafood, steaks
+Menu: salad, risotto, pasta, pizza, seafood, steaks // the menus really big
 Price range: 20 pp
 Categories: Italian, Lively, Cozy, Authentic, Family-Friendly
 
-Name: The North End Cafe
+Name: The North End cafe
 Address: 24 McKeon St, Maroubra NSW 2035
 Rating: 4.6
 Trading hours:
