@@ -16,15 +16,16 @@ def display_restaurant(name, restaurant_names):
 				rating = re.match( r'^Rating:\s(.+)$', line, re.M|re.I)
 				# trading_hours = 
 				# menu = 
-				# price_range =
+				price_range = re.match( r'^Price\sRange:\s(.+)$',line, re.M|re.I)
 				# categories =
 				# tags =
 				#to connect with GUI -- assign variable to label
 				if name: print name.group(1)
 				if address: print address.group(1)
 				if rating: print rating.group(1)
-	else:
+				if price_range: print price_range.group(1)
 		#display error dialog
+	else:	
 		print "Error: invalid restaurant name"
 
 
