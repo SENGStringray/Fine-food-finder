@@ -2,9 +2,6 @@ import sys
 from PyQt4 import QtCore, QtGui
 #Name of restaurant supplied as a STRING
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 def display_restaurant(name, restaurant_names):
 	#find match in array of restaurant names
 	if name in restaurant_names:
@@ -32,21 +29,3 @@ def display_restaurant(name, restaurant_names):
 
 r_names = ["Cherie-Tree", "Thai-Riffic"];
 display_restaurant("Thai-Riffic", r_names);
-=======
->>>>>>> Stashed changes
-	def display_restaurant(name, restaurant_names):
-		#find match in array of restaurant names
-		if name in restaurant_names:
-			#display page
-			filename = "restaurants/%s" % name
-			file = open(filename,"r") #read file
-			print file.read()
-		else:
-			break;
-			#display error dialog
-<<<<<<< Updated upstream
-			print "Error: invalid restaurant name"
-=======
-			print "Error: invalid restaurant name"
->>>>>>> parent of 8747a9c... update to include restaurant folder
->>>>>>> Stashed changes
