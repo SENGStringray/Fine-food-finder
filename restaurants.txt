@@ -1,0 +1,539 @@
+Name: Cherie Tree
+Description:
+Contact: (02) 9783 8977
+Address: 68 Young Avenue, Kingsford, NSW 2032
+Rating: 3.7
+Trading Hours:
+    Monday: closed
+    Tuesday: closed
+    Wednesday: 11:00 - 22:00
+    Thursday: 11:00 - 00:00
+    Friday: 12:00 - 00:00
+    Saturday: 12:00 - 00:00
+    Sunday: 10:00 - 21:00
+Menu: Edamame, Seaweed-Salad, Gyoza, Takoyaki, Kaarage Chicken, Garlic Chicken Balls, Sakura Special Rolls(Teriyaki, California, BBQ Chicken, BBQ Beef, Rainbow, Eel, Grilled Salmon, Smoked Salmon, Chilli, Volcano, Philadelphia, Soft Shell Crab), Sashimi(Small, Large, Medium), Yaki Soba Noodle, Mandu Soup, Ramen, Udon
+Price Range: $25pp
+Categories: Japanese, Casual, Cozy, Small-Groups, Alcohol, Bar, Wheelchair-Access
+
+Name: Thai-riffic
+Description: (02) 8434 9081
+Address: 4 Horse Street, Kingsford, NSW 2032
+Rating: 4.1
+Trading Hours:
+    Monday: 17:00 - 22:00
+    Tuesday: 17:00 - 22:00
+    Wednesday: 17:00 - 22:00
+    Thursday: 17:00 - 12:00
+    Friday: 15:00 - 00:00
+    Saturday: 15:00 - 00:00
+    Sunday: 15:00 - 21:00
+Menu:Spring Rolls, Fish Cakes, Curry Puffs, Crispy Chicken Wings, Marinated Quails, Satay Chicken Skewers,Snapper and Mango Salad, Fish with sweet and sour spicy sauce, Mixed Seafood Platter, Soft Shell Crab, Salt and pepper Calamari, Thai king jumbo Prawns, Seafood Mixed Grill, Tom Yum Soup, Tom Zap Soup, Galangal and Coconut Soup, Ox Tongue, Lao Pork Sausages, Marinated BBQ Beef Cuts, Marinated Lamb Cutlets, Laos Charcoal Chicken, Laos Papaya Salad, Nem Khao Rice and Cured Pork Salad, Chicken Feet Salad, Garlic and Peppercorn Stir-fry, Roast Pork Belly in chilli Basil and Garlic Sauce, Fried Ice Cream
+Price Range: $18pp
+Categories: Thai, Casual, Cozy, Small-Groups, Large-Groups, Byo, Lively, Take-Away, Vegetarian-Friendly, Child-friendly, Smoking-Area
+
+Name: Pho Real Friends
+Description:
+Address: 15 Horse Street, Kingsford, NSW 2032
+Rating: 4.7
+Trading Hours:
+    Monday: 09:00 - 21:00
+    Tuesday: 09:00 - 21:00
+    Wednesday: 09:00 - 21:00
+    Thursday: 09:00 - 21:00
+    Friday: 09:00 - 21:00
+    Saturday: 09:00 - 21:00
+    Sunday: 09:00 - 21:00
+Menu:House Specialty: Fried Shrimp Cakes, Vietnamese Fried Egg Rolls, Fresh Spring Rolls, Shredded Pork Skin Rolls, Crispy Butterfly Shrimp, House Specialty: Rare Tenderloin Beef Noodle Soup, Special Noodle Soup, Chicken Noodle Soup, Rice and Egg Noodle Soup with shrimp/squid/pork/beef, Dried Rice Noodle in Oyster Sauce with Seafood and Pork, Rice Noodle with Beef Stew, Egg Noodle with Beef Stew, Fried rice with grilled pork/shrimp/beef/chicken, Fried rice with Lemon Grass Chicken/Salmon/Tofu/Salmon
+Price Range: $18pp
+Categories: Vietnamese, Casual-Dining, Authentic, Byo, Take-Away, Wheelchair-Access, Vegetarian-Friendly, Cash-Only
+
+Name: The Cafeteria Food Truck
+Description:
+Contact: thecafeteriafoodtruck.com.au
+Address: Maroubra, NSW 2035 -- visit website for details
+Rating:
+Trading Hours:
+    Monday: closed
+    Tuesday: closed
+    Wednesday: closed
+    Thursday: 18:00 - 22:00
+    Friday: 18:00 - 22:00
+    Saturday: 18:00 - 22:00
+Menu: Please see our website for details
+Price Range: $15pp
+Categories: Burgers, Finger-Food, Cash-Only, Lively, Street-Food, Vegetarian-Friendly, Child-Friendly, Pet-Friendly
+
+Name: The Gumbo Pot
+Description:
+Address: 68 Rainbow Road, Maroubra, NSW 2035
+Rating: 3.9
+Trading Hours:
+    Monday: 07:00 - 22:00
+    Tuesday: 07:00 - 22:00
+    Wednesday: 07:00 - 22:00
+    Thursday: 07:00 - 22:00
+    Friday: 07:00 - 22:00
+    Saturday: 07:00 - 22:00
+    Sunday: 07:00 - 22:00
+Menu: Famous Ferdi Special Po Boy, Ralph Po Boy, John G Po Boy, Turkey Ferdi Po Boy, Ham Po Boy, Roast beed Po Boy, Debris Original Po Boy, Sausage Po Boy, Side Dishes(Red Beans and Rice, Cabbage, French Fries, Grits, Add Cheese, Extra Meat), Salads(Garden, Chef, Chicken, Shrimp, Catfish, Fried Oyster), Seafood Gumbo, Mae's File Creole, Shrimp Greole, Jerry's Jambalaya, Crawfish Etouffee, Bread pudding with Brandy Sauce, Beverages(Mother's Spicy Bloody Mary, Mimosa, Beer, Wine)
+Price Range: $30pp
+CategorIes: Creole, Cosy, Authentic, Bar, Large-Groups, Child-Friendly, Smoking-Area, Live-Music
+
+Name: Tortilleria
+Description:
+Address: 22 Maroubra Rd, Maroubra, NSW 2035
+Rating: 3.6
+Trading Hours:
+    Monday: 09:00 - 23:00
+    Tuesday: 09:00 - 23:00
+    Wednesday: 09:00 - 23:00
+    Thursday: 09:00 - 23:00
+    Friday: 09:00 - 23:00
+    Saturday: 09:00 - 23:00
+    Sunday: 09:00 - 22:00
+Menu: Burrito, Small Burrito, Naked Burrito, Quesadilla, Nachos, Crispy Tacos, White Corn Tacos, Soft Flour Tacos, Grande Melt, Ensalada Fresca *with a choice of Chicken, Beef, Chorizo, Steak, Pulled pork, Veggies as filling*, Jarritos, Soft Drinks
+Price Range: $35pp
+Categories: Mexican, Small-Groups, Large-Groups, Lively, Live-Music, Bar, Vegetarian-Friendly, Child-Friendly, Smoking-Area
+
+Name: Pierre's Restaurant
+Description:
+Address: 11 Kings Avenue, Kingsford NSW 2035
+Rating: 4.6
+Trading Hours:
+    Monday: 17:30 - 22:00
+    Tuesday: 17:30 - 22:00
+    Wednesday: 17:30 - 22:00
+    Thursday: 17:30 - 22:30
+    Friday: 12:00 - 13:00, 17:30 - 22:30
+    Saturday: 12:00 - 13:00, 17:30 - 22:30
+    Sunday: 12:00 - 13:00, 17:30 - 22:30
+Menu: Entree(Escargots de Bourgogne, Pate Maison, Salt and Pepper Squid, Salmon Roulade, Boulette de Fruits de Mer), Sides(Garlic Bread, Herb Bread, Bruschetta, Chilli cheese and Honey bread), Mains(Fillet of Beef Tenderloin, Cote de Veau, Loin of Lamb, Kangaroo Fillet, Vegetarian Risotto), Desserts(Profiterole, Sticky Date Pudding, Creme Caramel, Kahlua Infused Chocolate Mousse, Fourme D'Ambert)
+Price Range: $65pp
+Categories: French, Fine-Dining, Romantic, Small-Groups, Bar, Wheelchair-Access, Live-Music
+
+Name: Charcoal Chicken
+Address: 26 Rainbow Street, Kingsford NSW 2032
+Rating: 4.5
+Trading hours:
+   Monday: 12:00 – 23:00
+   Tuesday: 10:00 – 23:00
+   Wednesday: 10:00 – 23:00
+   Thursday: 10:00 – 23:00
+   Friday: 10:00 – 23:00
+   Saturday: 09:00 – 23:00
+   Sunday: closed
+Menu: Charcoal Chicken, Fries, Lebanese Bread, Wrap (Chicken, Beef, Lamb), BBQ Chicken, Salads, Burger (Beef, Chicken)
+Price range: $35 for two people (approx.)
+Categories: Lebanese, Casual-Dining, Takeaway, Small-Groups, Large-Groups, Smoke-Free, Barbecue
+
+Name: Bob’s Burger
+Address: 460 Anzac Parade, Kingsford NSW 2032
+Rating: 3.5
+Trading hours:
+   Monday: closed
+   Tuesday: 13:00 – 21:00
+   Wednesday: 13:00 – 21:00
+   Thursday: 13:00 – 21:00
+   Friday: 13:00 – 21:00
+   Saturday: 13:00 – 21:00
+   Sunday: 13:00 – 20:00
+Menu: Burgers (Americana, Mac n Cheese, Chilli, Chicken, Classic, Heart Attack), Fries
+Price range: $50 for two people (approx.)
+Categories: American, Casual-Dining, Small-Groups, Cash-Only, Burger-Only
+
+Name: Hot Bistro
+Address: 109 Houston Road, Kingsford NSW 2032
+Rating: 3.7
+Trading hours:
+   Monday: 10:00 – 23:00
+   Tuesday: 10:00 – 23:00
+   Wednesday: 10:00 – 23:00
+   Thursday: 10:00 – 23:00
+   Friday: 12:00 – 03:00
+   Saturday: 12:00 – 03:00
+   Sunday: 10:00 – 23:00
+Menu: Steaks (300g Rump, 500g Rump, 350g T-Bone, 350g Sirloin), Burgers (Chicken, Beef, Tofu, Veggie) Fish and Chips, Vegetarian Nacho, Salad, Garlic Bread, Pizza (Margherita, Marinara)
+Price range: $65 for two people (approx.)
+Categories: Bistro, Pub, Bar, Alcohol, Byo, Casual-Dining, Lively, Smoking-Area, Vegetarian-Friendly, Wheelchair-Accessible, Small-Groups, Large-Groups
+
+Name: Café Au Lit
+Address: 3 Chester Avenue, Maroubra NSW 2035
+Rating: 3.2
+Trading hours:
+   Monday: 07:30 – 23:30
+   Tuesday: 07:30 – 23:30
+   Wednesday: closed
+   Thursday: 07:30 – 23:30
+   Friday: 07:30 – 23:30
+   Saturday: 07:30 – 23:30
+   Sunday: 07:30 – 23:30
+Menu: BLT Bagel, Pancakes (Strawberry, Watermelon, Chocolate), Soup (Tomato Basil, Pumpkin, Tomato, Onion), Croissants, Donuts, Sliders (Beef, Pulled Pork), Milk shakes, Coffee, Tea, Sandwiches (BLT, Vegetable, Tofu, Chicken, Beef), Salad
+Price range: $25 for two people (approx.)
+Categories: Café, Child-Friendly, Vegetarian-Friendly, Wheelchair-Accessible, Small-Groups, Pet-Friendly, Takeaway
+
+Name: Black Birch
+Address: 205 Maroubra Road, Maroubra NSW 2035
+Rating: 3.9
+Trading hours:
+   Monday: 18:00 – 23:30
+   Tuesday: 18:00 – 23:30
+   Wednesday: 18:00 – 23:30
+   Thursday: 18:00 – 23:30
+   Friday: 12:00 – 23:30
+   Saturday: 12:00 – 23:30
+   Sunday: closed
+Menu: Entrée (Oysters, Chickpea, Scallop, Quail, Salad), Main (Tuna, Pork, Steak, Kangaroo, Emu, Tofu), Dessert (Chocolate Fondant, Panna Cotta, Cheesecake, crème brûlée)
+Price range: $250 for two people (approx.)
+Categories: Fine-dining, Modern, Wheelchair-Accessible, Small-Groups, Large-Groups, Vegetarian-Friendly, Bar, Alcohol, Romantic
+
+Name: Lettuce Go
+Address: 93 Mason Street, Maroubra NSW 2035
+Rating: 3.8
+Trading hours:
+   Monday: 10:30 – 21:00
+   Tuesday: closed
+   Wednesday: 10:30 – 21:00
+   Thursday: 10:30 – 21:00
+   Friday: 10:30 – 21:00
+   Saturday: 10:30 – 21:00
+   Sunday: closed
+Menu: Papaya Salad, Pad Thai, Tom yum, Duck Salad, Curry (Chicken, Duck, Vegetable), Fried Rice, Wonton Soup, Tofu, Spring Roll
+Price range: $45 for two people (approx.)
+Categories: Thai, Cash-Only, Casual-Dining, Cozy, Vegetarian-Friendly, Small-Groups, Byo, Takeaway
+
+Name: Pho-Bulous
+Address: 3 Byng Street, Maroubra NSW 2035
+Rating: 2.8
+Trading hours:
+   Monday: 07:00 – 19:00
+   Tuesday: 07:00 – 19:00
+   Wednesday: 07:00 – 19:00
+   Thursday: 07:00 – 19:00
+   Friday: 07:00 – 19:00
+   Saturday: 07:00 – 19:00
+   Sunday: 07:00 – 19:00
+Menu: Noodle Soup (Beef, Chicken, Vegetable), Coconut Juice, Tea, Coffee
+Price range: $35 for two people (approx.)
+Categories: Vietnamese, Casual-Dining, Vegetarian-Friendly, Cash-Only, Small-Groups, Child-Friendly, Takeaway
+
+Name: DongDong Noodles
+Address: 35 Kingsford, Anzac Parade
+Rating /5 stars: 3
+Trading hours: 11:00 - 22:00
+Menu: BBQ Chicken, BBQ Pork, BBQ Duck, Soup, Soup Noodles, Fried Noodles.
+Price range: $25 for 2 people
+Categories: Chinese,Takeaway, Cash-Only, Fast-Food, Small-Group, Vegetarian-Friendly, Lively, Smoking-Area
+
+Name: Time for Thai
+Address: 10 Kingsford, Anzac Parade
+Rating /5 stars: 3.4
+Trading hours: 
+    Monday: 12:00 - 21:00
+    Tuesday: 12:00 - 21:00
+    Wednesday: 12:00 - 21:00
+    Thursday: 12:00 - 21:00
+    Friday: 12:00 - 21:00
+    Saturday: 12:00 - 21:00
+    Sunday: closed
+Menu: BBQ Chicken, BBQ beef, Thai Fried Rice, Thai Curry, Red Curry, Green Curry.
+Price range: $35 for 2 people
+Categories: Thai, Takeaway, Fast-Food, Casual, Vegetarian-Friendly, Small-Groups, Lively
+
+Name: Pinocco
+Address: 18 Kingsford, Anzac Parade
+Rating /5 stars: 3.2
+Trading hours: 
+    Monday: 12:00 - 21:00
+    Tuesday: 12:00 - 21:00
+    Wednesday: 12:00 - 21:00
+    Thursday: 12:00 - 21:00
+    Friday: 12:00 - 21:00
+    Saturday: 12:00 - 21:00
+    Sunday: closed
+Menu: Tofu hot pot, Sashimi Bento, Sushi Bento, Seafood hot-pot, Tuna, Salmon, Kingfish
+Price range: $38  for 2 people
+Categories: Japanese, Large-Groups, Takeaway, Wheelchair-Accessible, Smoking-Area
+
+Name: Niji
+Address: 40 Kingsford, Anzac Parade
+Rating /5 stars: 3.8
+Trading hours: 
+    Monday: 12:00 - 21:00
+    Tuesday: 12:00 - 21:00
+    Wednesday: 12:00 - 21:00
+    Thursday: 12:00 - 21:00
+    Friday: 12:00 - 21:00
+    Saturday: 12:00 - 21:00
+    Sunday: 12:00 - 21:00
+Menu: Wagyu Beef, Salmon Sushi, Salmon hand-roll, Garden Salad, Tuna, Salmon, Kingfish
+Price range: $70  for 2 people
+Categories: Japanese, Takeaway, Large-Groups, Small-Groups, Functions, Wheelchair-Accessible
+
+Name: Tea Plus
+Address: 40 Kingsford, Anzac Parade
+Rating /5 stars: 3.8
+Trading hours: 
+    Monday: closed
+    Tuesday: 12:00 - 22:00
+    Wednesday: 12:00 - 22:00
+    Thursday: 12:00 - 22:00
+    Friday: 12:00 - 22:00
+    Saturday: 12:00 - 22:00
+    Sunday: closed
+Menu: Fried Chicken, Beef noodles, Pancakes.
+Price range: $70  for 2 people
+Categories: Taiwanese, Small-Groups, Casual-Dining, Smoking-Area, Lively, Vegetarian-Friendly, Child-Friendly
+
+Name: Passion Flower
+Address: 40 Kingsford, Anzac Parade
+Rating /5 stars: 4.2
+Trading hours:
+    Monday: 12:00 - 21:00
+    Tuesday: 12:00 - 21:00
+    Wednesday: 12:00 - 21:00
+    Thursday: 12:00 - 21:00
+    Friday: 12:00 - 21:00
+    Saturday: 12:00 - 21:00
+    Sunday: closed
+Menu: Pancakes, Chocolate ice-cream, Latte, iced coffee, Milk tea
+Price range: $30  for 2 people
+Categories: Cafe, Casual-Dining, Romantic, Small-Groups
+
+Name: Nikko
+Address: 40 Kingsford, Anzac Parade
+Rating /5 stars: 3.0
+Trading hours:
+    Monday: 12:00 - 21:00
+    Tuesday: 12:00 - 21:00
+    Wednesday: 12:00 - 21:00
+    Thursday: 12:00 - 21:00
+    Friday: 12:00 - 21:00
+    Saturday: 12:00 - 21:00
+    Sunday: closed
+Menu: Prawn Curry, Ramen, Hand-roll, Sashimi, Tuna, Salmon, Kingfish, Salad, Hot-pot
+Price range: $40  for 2 people
+Categories:  Korean, Small-groups
+
+Name: Rubyos
+Address: Maroubra
+Rating: 3.9
+Trading Hours:
+    Monday: closed
+    Tuesday: 11:00 - 22:00
+    Wednesday: 11:00 - 22:00
+    Thursday: 11:00 - 00:00
+    Friday: 12:00 - 00:00
+    Saturday: 12:00 - 00:00
+    Sunday: 10:00 - 21:00
+Menu: Baked Atlantic Salmon, Nordic Style Potato Fish Cakes, Lemon Pepper Chicken Tenderloins, Black Angus Beef Rump, Charred Eggplant Involtini
+Price Range: $35 for one person(approx.)
+Categories: Fine-dining, Romantic
+
+Name: Seasoning Thai
+Address: Maroubra
+Rating: 3.4
+Trading Hours:
+    Monday: 11:00 - 22:00
+    Tuesday: 11:00 - 22:00
+    Wednesday: 11:00 - 22:00
+    Thursday: 11:00 - 00:00
+    Friday: 12:00 - 00:00
+    Saturday: 11:00 - 23:00
+    Sunday: closed
+Menu: Money Bags, Satay Chicken Skewers, Chocolate Spring Rolls, Pad Thai, Soft Shell Crab Salad
+Price Range: $18 for one person(approx.)
+Categories:  Thai, Casual-Dining, Cash-Only
+
+Name: Rice Paper Restaurant
+Address: Maroubra
+Rating: 4.1
+Trading Hours:
+    Monday: 10:00 - 21:00
+    Tuesday: 11:00 - 22:00
+    Wednesday: 11:00 - 22:00
+    Thursday: 11:00 - 00:00
+    Friday: closed
+    Saturday: 12:00 - 00:00
+    Sunday: 10:00 - 21:00
+Menu: Autumn Rolls, Coconut Prawn, Nha Trang Rolls, Deep Fried Spring Rolls, Summer Rolls, Winter Rolls
+Price Range: $35 for one person(approx.)
+Categories: Vietnamese, Casual-Dining, Vegetarian-Friendly
+
+Name: Unaya
+Address: Maroubra
+Rating: 4.1
+Trading Hours:
+    Monday: closed
+    Tuesday: 11:00 - 22:00
+    Wednesday: 11:00 - 22:00
+    Thursday: 11:00 - 00:00
+    Friday: 12:00 - 00:00
+    Saturday: 12:00 - 00:00
+    Sunday: 10:00 - 21:00
+Menu: Pork Gyoza, Karaage Don,Pork Katsu Don, Teriyaki Chicken Don, Chicken Katsu Curry Don
+Price Range: $15 for one person(approx.)
+Categories: Japanese, Casual, Cozy, Small-Groups
+
+Name: Beach Bowls
+Address: Maroubra
+Rating: 3.9
+Trading Hours:
+    Monday: closed
+    Tuesday: 11:00 - 22:00
+    Wednesday: 11:00 - 22:00
+    Thursday: 11:00 - 00:00
+    Friday: 12:00 - 00:00
+    Saturday: 12:00 - 00:00
+    Sunday: 10:00 - 21:00
+Menu: Mr Miyag,Tai-Chi, Sumo, Buddha Salad Bowl, Chicken Salad Bowl, Kondoi Smoothie Bowl, Maui Smoothie Bowl, Pink Juice, Green Juice, Copacabana Smoothie, Maui Smoothie
+Price Range: $14 for one person(approx.)
+Categories: Cafe, Dessert, Take-Away, Casual-Dining
+
+Name: Arthur's Pizza
+Address: Maroubra
+Rating: 4.6
+Trading Hours:
+    Monday: 11:00 - 22:00
+    Tuesday: 11:00 - 22:00
+    Wednesday: 11:00 - 22:00
+    Thursday: 11:00 - 00:00
+    Friday: 12:00 - 00:00
+    Saturday: 12:00 - 00:00
+    Sunday: 10:00 - 21:00
+Menu: Arthur's Pizza, Capone Pizza, Supreme Pizza, Parma Pizza, Meat Lovers Pizza, Garlic Pizza ,Herb Pizza
+Price Range: $12 for one person(approx.)
+Categories: Small-Groups, Large-Groups, Vegetarian-Friendly, Casual-Dining, Cozy
+
+Name: Injoy Indian Delights
+Address: 
+Rating: 3.8
+Trading Hours:
+    Monday: 11:00 - 22:00
+    Tuesday: 11:00 - 22:00
+    Wednesday: 11:00 - 22:00
+    Thursday: 11:00 - 00:00
+    Friday: 12:00 - 00:00
+    Saturday: closed
+    Sunday: 10:00 - 21:00
+Menu: Arthur's Pizza, Capone Pizza, Supreme Pizza, Parma Pizza, Meat Lovers Pizza, Garlic Pizza ,Herb Pizza
+Price Range: $12 for one person(approx.)
+Categories: Indian, Small-Groups, Vegetarian-Friendly, Casual-Dining, Take-Away, Wheelchair-Accessible
+
+Name: Maranello's Woodfired Pizza Restaurant & Bar
+Address: 51/737 Anzac Parade, Maroubra NSW 2035
+Rating: 3.5
+Trading hours:
+   Monday: 11:30 - 22:00
+   Tuesday: 11:30 - 22:00
+   Wednesday: 11:30 - 22:00
+   Thursday: 11:30 - 22:00
+   Friday: 11:30 - 22:00
+   Saturday: 11:30 – 22:00
+   Sunday: 11:30 – 22:00
+Phone : (02) 8347 0733
+Email : 
+Menu: salad, risotto, pasta, pizza, seafood, steaks // the menus really big
+Price range: 20 pp
+Categories: Italian, Lively, Cozy, Authentic, Family-Friendly
+
+Name: The North End cafe
+Address: 24 McKeon St, Maroubra NSW 2035
+Rating: 4.6
+Trading hours:
+   Monday: 7:00 - 15:00 
+   Tuesday: 7:00 - 15:00
+   Wednesday: 7:00 - 15:00
+   Thursday: 7:00 - 15:00
+   Friday: 7:00 - 15:00
+   Saturday: 7:00 - 15:00
+   Sunday: 7:00 - 20:00
+Phone: (02) 8065 8036
+Email : 
+Menu: Full range of coffee, tea, milkshake, freshly squeezed juice, iced chocolate, iced coffee
+Price range: $15 pp
+Categories: Cafe, vegetarian, Breakfast, Takeaway, Wheelchair-Accessible, Alcohol, Bar, Outdoor-Seating, Child-Friendly, Gluten-Free-Options, Vegetarian-Friendly, Vegan-Friendly
+
+Name: Pavilion Beachfront
+Address: The Promenade, Maroubra Rd, Maroubra NSW 2035
+Rating: 3.5
+Trading hours:
+   Monday: 8:15 – 15:00
+   Tuesday: 8:15 – 15:00
+   Wednesday: 8:15 – 15:00
+   Thursday: 8:15 – 15:00
+   Friday: 8:15 – 15:00
+   Saturday: 8:15 – 15:00
+   Sunday: 8:15 – 15:00
+Phone:  02 8347 0055
+Email : 
+Menu:  chicken or pulled pork quesadilla, vegetable pasta, grilled eye fillet steak, beer battered or grilled fish, grilled barramundi, seafood pasta, atlantic salmon, paella for two, waygu burger, chicken burger, fish burger
+Price range: $20 pp
+Categories: Seafood, Waterfront, Cosy, Casual-Dining
+
+Name: Manpuku Kingsford
+Address: 482 Anzac Parade, Kingsford NSW 2032
+Rating: 4.2
+Trading hours:
+   Monday: 11:00 - 21:30
+   Tuesday: 11:00 - 21:30
+   Wednesday: 11:00 - 21:30
+   Thursday: 11:00 - 21:30
+   Friday: 11:00 - 21:30
+   Saturday: 11:00 - 21:30
+   Sunday: 11:00 - 21:30
+Phone: (02) 9662 1236
+Email :
+Menu: chicken, pork, chicken and pork, special soup ramen, japanese curry
+Price range: $16 pp
+Categories: Japanese, Takeaway, Wheelchair-Accessible, Gluten-Free-Options
+
+Name: Rosebery Martabak
+Address: 341A Anzac Parade, Kingsford NSW 2032
+Rating: 4.4
+Trading hours:
+   Monday: 12:00 – 22:00
+   Tuesday: 12:00 – 22:00
+   Wednesday: 12:00 – 22:00
+   Thursday: closed
+   Friday: 12:00 – 22:00
+   Saturday: 12:00 – 22:00
+   Sunday: 12:00 – 22:00
+Phone: (02) 9662 3706
+Email :
+Menu: roti, telur, campur, mca, nasi/ mie goreng, salad, manis
+Price range: $ 30 pp
+Categories: Indonesian, Home-Delivery, Takeway, Street-Style
+
+Name: Albee's Kitchen
+Address: 470 Anzac Parade, Kingsford NSW 2032
+Rating: 3.9
+Trading hours:
+   Monday: 5:00 – 22:00
+   Tuesday: 5:00 – 22:00
+   Wednesday: 5:00 – 22:00
+   Thursday: 5:00 – 22:00
+   Friday: 5:00 – 22:00
+   Saturday: 5:00 – 22:00
+   Sunday: 9:00 – 22:00
+Phone: (02) 9662 8788
+Email :
+Menu: Tofu Salad in Hot And Sour Sauce, Vegetable Spring Roll, Chicken & Egg Salad, Malay Style Taro Cake, Beef or Pork in Ginger Onion with Rice, Satay Chicken Rice, Sweet and Sour Chicken Rice, Nasi Goreng Kampung, BBQ Pork Fried Rice, Chinese Sausage Fried Rice, Squid Fried Rice, Sambal Petai Chicken Rice Vermicelli, Sambal Petai Squid Rice Vermicelli, Sambal Petai King Prawn Rice Vermicelli, BBQ Pork Bihun Goreng, Hainanese Chicken Kolo Mee, Pandan Chicken Kolo Mee, Loh Bak Kolo Mee, Sour and Spicy Seafood Noodle Soup
+Price range: $25 pp
+Categories: Chinese, Breakfast, Takeaway,,Wheelchair-Accessible, Vegetarian-Friendly, Casual-Dining
+
+Name: McDonald's Kingsford
+Address: 10 Barker St, Kingsford NSW 2032
+Rating: 3.0
+Trading hours: 24/7
+   Monday: 0:00 - 24:00
+   Tuesday: 0:00 - 24:00
+   Wednesday: 0:00 - 24:00
+   Thursday: 0:00 - 24:00
+   Friday: 0:00 - 24:00
+   Saturday: 0:00 - 24:00
+   Sunday: 0:00 - 24:00
+Phone:  (02) 9662 1492
+Email :
+Menu: big mac, Quarter pounder, cheese burger, mc chicken, you know the menu
+Price range: $10 pp
+Categories: Fast-Food, Budget-Meal, Wheelchair-Accessible, Takeaway
