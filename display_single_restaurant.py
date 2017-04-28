@@ -1,4 +1,5 @@
 import sys
+import re
 from PyQt4 import QtCore, QtGui
 #Name of restaurant supplied as a STRING
 
@@ -13,10 +14,10 @@ def display_restaurant(name, restaurant_names):
 				name = re.match( r'^Name:\s(.+)$', line, re.M|re.I)
 				address = re.match( r'^Address:\s(.+)$', line, re.M|re.I)
 				rating = re.match( r'^Rating:\s(.+)$', line, re.M|re.I)
-				trading_hours = 
-				menu = 
-				price_range =
-				categories =
+				# trading_hours = 
+				# menu = 
+				# price_range =
+				# categories =
 				# tags =
 				#to connect with GUI -- assign variable to label
 				if name: print name.group(1)
