@@ -5,29 +5,50 @@ from PyQt4 import QtCore, QtGui
 
 def display_restaurant(name, restaurant_names):
 	#find match in array of restaurant names
-	if name in restaurant_names:
+	if name in restaurant_names: #if restaurant to display is a valid restaurant
 		#display page
 		filename = "../Restaurants/%s" % name
 		#file = open(filename,"r") #read file
 		with open(filename) as file:
 			for line in file:
-				name = re.match( r'^Name:\s(.+)$', line, re.M|re.I)
-				address = re.match( r'^Address:\s(.+)$', line, re.M|re.I)
-				rating = re.match( r'^Rating:\s(.+)$', line, re.M|re.I)
-				# trading_hours = 
-				# menu = 
-				price_range = re.match( r'^Price\sRange:\s(.+)$',line, re.M|re.I)
-				# categories =
-				# tags =
-				#to connect with GUI -- assign variable to label
-				if name: print name.group(1)
-				if address: print address.group(1)
-				if rating: print rating.group(1)
-				if price_range: print price_range.group(1)
+				line = re.match( r'^\s*(.+):\s+(.*)$', line, re.M|re.I)
+				if line.group(1): 
+					key = line.group(1)
+				if line.group(2):
+					data = line.group(2)
+				
+				#assign to labels
+				if key == 'Name':
+					name.setText(data)
+				elif key == 'Address':
+					print data
+				elif key == 'Rating':
+					print data
+				elif key == 'Monday':
+					print data
+				elif key == 'Tuesday':
+					print data
+				elif key == 'Wednesday':
+					print data
+				elif key == 'Thursday':
+					print data
+				elif key == 'Friday':
+					print data
+				elif key == 'Saturday':
+					print data
+				elif key == 'Sunday':
+					print data
+				elif key == 'Price Range':
+					print data
+				elif key == 'Menu':
+					print data
+				elif key == 'Categories':
+					print data
 		#display error dialog
 	else:	
 		print "Error: invalid restaurant name"
 
 
-r_names = ["Cherie-Tree", "Thai-Riffic"];
+
+r_names = ["Cherie-Tree", "Thai-Riffic","Black-Birch"];
 display_restaurant("Thai-Riffic", r_names);
