@@ -33,7 +33,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>Icon.png</normaloff>Icon.png</iconset>
+    <normaloff>../../../.designer/backup/Icon.png</normaloff>../../../.designer/backup/Icon.png</iconset>
   </property>
   <property name="toolTip">
    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -42,7 +42,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>60</y>
+     <y>50</y>
      <width>371</width>
      <height>31</height>
     </rect>
@@ -52,7 +52,7 @@
    <property name="geometry">
     <rect>
      <x>410</x>
-     <y>60</y>
+     <y>50</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -80,10 +80,10 @@
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>110</y>
+     <x>20</x>
+     <y>90</y>
      <width>191</width>
-     <height>248</height>
+     <height>241</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="ChoiceGrid_1">
@@ -135,7 +135,7 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>110</y>
+     <y>90</y>
      <width>191</width>
      <height>201</height>
     </rect>
