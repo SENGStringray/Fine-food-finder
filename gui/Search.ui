@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -22,12 +25,18 @@
     <height>320</height>
    </size>
   </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
   <property name="windowTitle">
    <string>FoodFinder</string>
   </property>
   <property name="windowIcon">
    <iconset>
     <normaloff>Icon.png</normaloff>Icon.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
   </property>
   <widget class="QLineEdit" name="bar_Search">
    <property name="geometry">
@@ -55,9 +64,9 @@
   <widget class="QLabel" name="lbl_Question">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>120</x>
      <y>20</y>
-     <width>201</width>
+     <width>241</width>
      <height>16</height>
     </rect>
    </property>
@@ -74,7 +83,7 @@
      <x>50</x>
      <y>110</y>
      <width>191</width>
-     <height>201</height>
+     <height>248</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="ChoiceGrid_1">
@@ -179,8 +188,8 @@
   <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>100</y>
+     <x>210</x>
+     <y>90</y>
      <width>82</width>
      <height>17</height>
     </rect>
