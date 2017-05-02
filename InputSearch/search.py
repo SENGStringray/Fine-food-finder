@@ -6,7 +6,7 @@ searchString = sys.stdin.readline()
 searchString.rstrip()
 path = "/Users/justindaerolee/School/seng2011/project" # write the path
 arrOfRestuarants = []
-for fileN in glob.glob(os.path.join(path, '*.txt')): 
+for fileN in glob.glob(os.path.join(path, '*.txt')): # doesn't seem to work 
 	f  = open(fileN, “r”)
 	content = f.read()
 	match = re.search(searchString, content)
