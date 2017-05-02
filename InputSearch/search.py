@@ -2,6 +2,14 @@
 
 import sys, re, os
 
+class Restuarant:
+        def __init__(self, name, price, rating):
+                self.name = name
+                self.price = price
+                self.rating = rating
+        def __repr__(self):
+                return repr((self.name, self.price, self.rating))
+
 searchString = sys.stdin.readline()
 searchString.rstrip()
 path = "/Users/justindaerolee/School/seng2011/project" # write the path
@@ -17,14 +25,7 @@ for fileN in glob.glob(os.path.join(path, '*.txt')): # doesn't seem to work
 for fileN in ArrOfRestuarants:
 	print(fileN)
 
-class Restuarant:
-        def __init__(self, name, price, rating):
-                self.name = name
-                self.price = price
-                self.rating = rating
-        def __repr__(self):
-                return repr((self.name, self.price, self.rating))
-        
-
+# sorted by name(default)
+#comparator = "name"
 sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.name)
 
