@@ -32,13 +32,13 @@ class Ui_Form(object):
         icon.addPixmap(QtGui.QPixmap(_fromUtf8("Icon.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Form.setWindowIcon(icon)
         self.bar_Search = QtGui.QLineEdit(Form)
-        self.bar_Search.setGeometry(QtCore.QRect(30, 60, 371, 31))
+        self.bar_Search.setGeometry(QtCore.QRect(30, 50, 371, 31))
         self.bar_Search.setObjectName(_fromUtf8("bar_Search"))
         self.btn_Search = QtGui.QPushButton(Form)
-        self.btn_Search.setGeometry(QtCore.QRect(410, 60, 71, 31))
+        self.btn_Search.setGeometry(QtCore.QRect(410, 50, 71, 31))
         self.btn_Search.setObjectName(_fromUtf8("btn_Search"))
         self.lbl_Question = QtGui.QLabel(Form)
-        self.lbl_Question.setGeometry(QtCore.QRect(150, 20, 181, 16))
+        self.lbl_Question.setGeometry(QtCore.QRect(130, 20, 251, 16))
         self.lbl_Question.setAutoFillBackground(False)
         self.lbl_Question.setObjectName(_fromUtf8("lbl_Question"))
         self.gridLayoutWidget = QtGui.QWidget(Form)
@@ -88,7 +88,7 @@ class Ui_Form(object):
         self.cb_Thai.setObjectName(_fromUtf8("cb_Thai"))
         self.ChoiceGrid_2.addWidget(self.cb_Thai, 4, 0, 1, 1)
         self.radioButton = QtGui.QRadioButton(Form)
-        self.radioButton.setGeometry(QtCore.QRect(200, 100, 82, 17))
+        self.radioButton.setGeometry(QtCore.QRect(220, 90, 82, 17))
         self.radioButton.setObjectName(_fromUtf8("radioButton"))
 
         self.retranslateUi(Form)
@@ -138,14 +138,4 @@ class Ui_Form(object):
         self.cb_Mexican.setText(_translate("Form", "Mexican", None))
         self.cb_Thai.setText(_translate("Form", "Thai", None))
         self.radioButton.setText(_translate("Form", "All", None))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    Form = QtGui.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())
 
