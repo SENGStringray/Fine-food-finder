@@ -25,26 +25,24 @@ except AttributeError:
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName(_fromUtf8("Form"))
-        Form.setEnabled(True)
         Form.resize(500, 320)
         Form.setMinimumSize(QtCore.QSize(500, 320))
         Form.setMaximumSize(QtCore.QSize(500, 320))
-        Form.setAcceptDrops(False)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../../.designer/backup/Icon.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("Icon.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Form.setWindowIcon(icon)
         self.bar_Search = QtGui.QLineEdit(Form)
-        self.bar_Search.setGeometry(QtCore.QRect(30, 50, 371, 31))
+        self.bar_Search.setGeometry(QtCore.QRect(30, 60, 371, 31))
         self.bar_Search.setObjectName(_fromUtf8("bar_Search"))
         self.btn_Search = QtGui.QPushButton(Form)
-        self.btn_Search.setGeometry(QtCore.QRect(410, 50, 71, 31))
+        self.btn_Search.setGeometry(QtCore.QRect(410, 60, 71, 31))
         self.btn_Search.setObjectName(_fromUtf8("btn_Search"))
         self.lbl_Question = QtGui.QLabel(Form)
-        self.lbl_Question.setGeometry(QtCore.QRect(120, 20, 241, 16))
+        self.lbl_Question.setGeometry(QtCore.QRect(150, 20, 181, 16))
         self.lbl_Question.setAutoFillBackground(False)
         self.lbl_Question.setObjectName(_fromUtf8("lbl_Question"))
         self.gridLayoutWidget = QtGui.QWidget(Form)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(20, 90, 191, 241))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(50, 110, 191, 201))
         self.gridLayoutWidget.setObjectName(_fromUtf8("gridLayoutWidget"))
         self.ChoiceGrid_1 = QtGui.QGridLayout(self.gridLayoutWidget)
         self.ChoiceGrid_1.setObjectName(_fromUtf8("ChoiceGrid_1"))
@@ -67,7 +65,7 @@ class Ui_Form(object):
         self.cb_Italian.setObjectName(_fromUtf8("cb_Italian"))
         self.ChoiceGrid_1.addWidget(self.cb_Italian, 4, 0, 1, 1)
         self.gridLayoutWidget_2 = QtGui.QWidget(Form)
-        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(280, 90, 191, 201))
+        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(280, 110, 191, 201))
         self.gridLayoutWidget_2.setObjectName(_fromUtf8("gridLayoutWidget_2"))
         self.ChoiceGrid_2 = QtGui.QGridLayout(self.gridLayoutWidget_2)
         self.ChoiceGrid_2.setObjectName(_fromUtf8("ChoiceGrid_2"))
@@ -90,7 +88,7 @@ class Ui_Form(object):
         self.cb_Thai.setObjectName(_fromUtf8("cb_Thai"))
         self.ChoiceGrid_2.addWidget(self.cb_Thai, 4, 0, 1, 1)
         self.radioButton = QtGui.QRadioButton(Form)
-        self.radioButton.setGeometry(QtCore.QRect(220, 90, 82, 17))
+        self.radioButton.setGeometry(QtCore.QRect(200, 100, 82, 17))
         self.radioButton.setObjectName(_fromUtf8("radioButton"))
 
         self.retranslateUi(Form)
@@ -125,7 +123,6 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(_translate("Form", "FoodFinder", None))
-        Form.setToolTip(_translate("Form", "<html><head/><body><p><br/></p></body></html>", None))
         self.btn_Search.setText(_translate("Form", "Search", None))
         self.lbl_Question.setText(_translate("Form", "Where would you like to eat today?", None))
         self.cb_Japanese.setText(_translate("Form", "Japanese", None))
@@ -142,12 +139,13 @@ class Ui_Form(object):
         self.cb_Thai.setText(_translate("Form", "Thai", None))
         self.radioButton.setText(_translate("Form", "All", None))
 
+
 if __name__ == "__main__":
     import sys
     app = QtGui.QApplication(sys.argv)
     Form = QtGui.QWidget()
     ui = Ui_Form()
     ui.setupUi(Form)
-    #ui.home().show()
     Form.show()
     sys.exit(app.exec_())
+

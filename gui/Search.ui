@@ -2,9 +2,6 @@
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
-  <property name="enabled">
-   <bool>true</bool>
-  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -25,24 +22,18 @@
     <height>320</height>
    </size>
   </property>
-  <property name="acceptDrops">
-   <bool>false</bool>
-  </property>
   <property name="windowTitle">
    <string>FoodFinder</string>
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../.designer/backup/Icon.png</normaloff>../../../.designer/backup/Icon.png</iconset>
-  </property>
-  <property name="toolTip">
-   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <normaloff>Icon.png</normaloff>Icon.png</iconset>
   </property>
   <widget class="QLineEdit" name="bar_Search">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>50</y>
+     <y>60</y>
      <width>371</width>
      <height>31</height>
     </rect>
@@ -52,7 +43,7 @@
    <property name="geometry">
     <rect>
      <x>410</x>
-     <y>50</y>
+     <y>60</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -64,9 +55,9 @@
   <widget class="QLabel" name="lbl_Question">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>150</x>
      <y>20</y>
-     <width>241</width>
+     <width>181</width>
      <height>16</height>
     </rect>
    </property>
@@ -80,10 +71,10 @@
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>90</y>
+     <x>50</x>
+     <y>110</y>
      <width>191</width>
-     <height>241</height>
+     <height>201</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="ChoiceGrid_1">
@@ -135,7 +126,7 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>90</y>
+     <y>110</y>
      <width>191</width>
      <height>201</height>
     </rect>
@@ -188,8 +179,8 @@
   <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>90</y>
+     <x>200</x>
+     <y>100</y>
      <width>82</width>
      <height>17</height>
     </rect>

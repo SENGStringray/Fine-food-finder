@@ -29,7 +29,7 @@
    <iconset>
     <normaloff>Icon.png</normaloff>Icon.png</iconset>
   </property>
-  <widget class="QLabel" name="lbl_Question">
+  <widget class="QLabel" name="lbl_Result">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -45,14 +45,82 @@
     <string>Result</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="testBox">
+  <widget class="QPushButton" name="btn_restaurant1">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>60</y>
-     <width>351</width>
-     <height>181</height>
+     <x>40</x>
+     <y>50</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="text">
+    <string>restaurant 1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_restaurant2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>110</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>restaurant 2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_restaurant3">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>restaurant 3</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_restaurant1">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>50</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Restaurant 1 details</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_restaurant2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>110</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Restaurant 2 details</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_restaurant3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>170</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Restaurant 3 details</string>
    </property>
   </widget>
  </widget>
