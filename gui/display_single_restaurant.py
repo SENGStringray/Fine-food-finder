@@ -16,11 +16,11 @@ class display_restaurant_page(QtGui.QWizardPage, Ui_WizardPage):
 			with open(filename) as file:
 				for line in file:
 					line = re.match( r'^\s*(.+):\s+(.*)$', line, re.M|re.I)
-					if line.group(1): 
+					if line.group(1):
 						label = line.group(1)
 					if line.group(2):
 						data = line.group(2)
-					
+
 					#assign to labels
 					if label == 'Name':
 						self.restaurantName.setText(data)
@@ -38,19 +38,19 @@ class display_restaurant_page(QtGui.QWizardPage, Ui_WizardPage):
 							no_stars = no_stars-1
 						self.restaurantRating.setText(string)
 					elif label == 'Monday':
-						mon = data
+						self.tradingHours.addItem("Monday: " + data)
 					elif label == 'Tuesday':
-						tue = data
+						self.tradingHours.addItem("Tuesday: " + data)
 					elif label == 'Wednesday':
-						wed = data
+						self.tradingHours.addItem("Wednesday: " + data)
 					elif label == 'Thursday':
-						thu = data
+						self.tradingHours.addItem("Thursday: " + data)
 					elif label == 'Friday':
-						fri = data
+						self.tradingHours.addItem("Friday: " + data)
 					elif label == 'Saturday':
-						sat = data
+						self.tradingHours.addItem("Saturday: " + data)
 					elif label == 'Sunday':
-						sun = data
+						self.tradingHours.addItem("Sunday: " + data)
 					elif label == 'Price Range':
 						priceR = data
 					elif label == 'Menu':
@@ -58,7 +58,7 @@ class display_restaurant_page(QtGui.QWizardPage, Ui_WizardPage):
 					elif label == 'Categories':
 						tags = data
 			#display error dialog
-		else:	
+		else:
 			print "Error: invalid restaurant name"
 
 
