@@ -12,11 +12,25 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.btn_Search.clicked.connect(self.handleSearchButton)
 
+        mainMenu = self.menuBar()
+        fileMenu = mainMenu.addMenu('&File')
+        #fileMenu.addAction(extractAction)
+
     def handleSearchButton(self):
         window.NewSearch = ResultWindow(self)
         window.NewSearch.show()
 
+    def home(self):
+        extractAction = QtGui.QAction(QtGui.QIcon('Icon.png'), 'Flee the Scene', self)
+        extractAction.triggered.connect(self.close_application)
+        self.show()
+        
+    def close_application(self):
+        print("Whooaaaa so custome!!!")
+        sys.exit()
 
+
+        
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
     def __init__(self, parent=None):
         super(ResultWindow, self).__init__(parent)

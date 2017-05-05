@@ -90,6 +90,9 @@ class Ui_Form(object):
         self.radioButton = QtGui.QRadioButton(Form)
         self.radioButton.setGeometry(QtCore.QRect(220, 90, 82, 17))
         self.radioButton.setObjectName(_fromUtf8("radioButton"))
+        self.pushButton = QtGui.QPushButton(Form)
+        self.pushButton.setGeometry(QtCore.QRect(0, 0, 41, 21))
+        self.pushButton.setObjectName(_fromUtf8("pushButton"))
 
         self.retranslateUi(Form)
         QtCore.QObject.connect(self.btn_Search, QtCore.SIGNAL(_fromUtf8("clicked()")), self.bar_Search.clear)
@@ -138,4 +141,5 @@ class Ui_Form(object):
         self.cb_Mexican.setText(_translate("Form", "Mexican", None))
         self.cb_Thai.setText(_translate("Form", "Thai", None))
         self.radioButton.setText(_translate("Form", "All", None))
+        self.pushButton.setText(_translate("Form", "Exit", None))
 
