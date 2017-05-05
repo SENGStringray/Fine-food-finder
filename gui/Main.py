@@ -11,14 +11,22 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
         self.btn_Search.clicked.connect(self.handleSearchButton)
+        self.bar_Search.textChanged.connect(self.handleSearchTextChanged)
+        self.searchString = ""
 
         mainMenu = self.menuBar()
         fileMenu = mainMenu.addMenu('&File')
         #fileMenu.addAction(extractAction)
 
     def handleSearchButton(self):
-        window.NewSearch = ResultWindow(self)
+        #print "Text typed: ", self.searchString
+        window.NewSearch = ResultWindow(self.searchString, self)
         window.NewSearch.show()
+
+    def handleSearchTextChanged(self):
+        if (str(self.bar_Search.text()) != ""):
+            self.searchString = str(self.bar_Search.text())
+        #print "Text bound: ", self.searchString
 
     def home(self):
         extractAction = QtGui.QAction(QtGui.QIcon('Icon.png'), 'Flee the Scene', self)
@@ -32,7 +40,11 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 
         
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
-    def __init__(self, parent=None):
+    def __init__(self, searchStr, parent=None):
+        print "Constructing Result window"
+        self.searchString = searchStr
+        print self.searchString
+        print "String to search: ", self.searchString
         super(ResultWindow, self).__init__(parent)
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
         self.setupUi(self)
