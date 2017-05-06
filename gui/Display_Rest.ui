@@ -89,7 +89,7 @@
     <rect>
      <x>30</x>
      <y>200</y>
-     <width>741</width>
+     <width>731</width>
      <height>16</height>
     </rect>
    </property>
@@ -120,7 +120,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>10</y>
       <width>161</width>
       <height>21</height>
@@ -138,13 +138,44 @@
      <string>Features:</string>
     </property>
    </widget>
+   <widget class="QTextEdit" name="tags">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>181</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::HLine</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="overwriteMode">
+     <bool>true</bool>
+    </property>
+    <property name="acceptRichText">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
      <x>220</x>
      <y>220</y>
-     <width>551</width>
+     <width>541</width>
      <height>401</height>
     </rect>
    </property>
@@ -156,7 +187,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>10</y>
       <width>161</width>
       <height>21</height>
@@ -174,15 +205,46 @@
      <string>Menu</string>
     </property>
    </widget>
+   <widget class="QTextEdit" name="menu">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>541</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::VLine</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QComboBox" name="tradingHours">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>170</y>
-     <width>251</width>
+     <width>411</width>
      <height>25</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+    </font>
    </property>
    <item>
     <property name="text">

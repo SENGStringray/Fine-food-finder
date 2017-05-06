@@ -54,9 +54,12 @@ class display_restaurant_page(QtGui.QWizardPage, Ui_WizardPage):
 					elif label == 'Price Range':
 						priceR = data
 					elif label == 'Menu':
-						menu = data
+						# data_new = re.sub(',\s', '\n', data)
+						self.menu.setText(data)
 					elif label == 'Categories':
-						tags = data
+						data_new = re.sub('$', '$<html><li>', data)
+						data_new_new = re.sub(',\s', '</li>\n<li>', data_new)
+						self.tags.setText(data_new_new)
 			#display error dialog
 		else:
 			print "Error: invalid restaurant name"
