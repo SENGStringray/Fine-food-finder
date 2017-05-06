@@ -13,6 +13,20 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
         self.btn_Search.clicked.connect(self.handleSearchButton)
         self.bar_Search.textChanged.connect(self.handleSearchTextChanged)
         self.searchString = ""
+        self.checkBoxString = ""
+
+        self.cb_0.stateChanged.connect(self.state_changed0)
+        self.cb_1.stateChanged.connect(self.state_changed1)
+        self.cb_2.stateChanged.connect(self.state_changed2)
+        self.cb_3.stateChanged.connect(self.state_changed3)
+        self.cb_4.stateChanged.connect(self.state_changed4)
+        self.cb_5.stateChanged.connect(self.state_changed5)
+        self.cb_6.stateChanged.connect(self.state_changed6)
+        self.cb_7.stateChanged.connect(self.state_changed7)
+        self.cb_8.stateChanged.connect(self.state_changed8)
+        self.cb_9.stateChanged.connect(self.state_changed9)
+        self.cb_10.stateChanged.connect(self.state_changed10)
+        self.cb_11.stateChanged.connect(self.state_changed11)
 
         mainMenu = self.menuBar()
         fileMenu = mainMenu.addMenu('&File')
@@ -20,7 +34,7 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 
     def handleSearchButton(self):
         #print "Text typed: ", self.searchString
-        window.NewSearch = ResultWindow(self.searchString, self)
+        window.NewSearch = ResultWindow(self.checkBoxString, self.searchString, self)
         window.NewSearch.show()
 
     def handleSearchTextChanged(self):
@@ -32,22 +46,98 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
         extractAction = QtGui.QAction(QtGui.QIcon('Icon.png'), 'Flee the Scene', self)
         extractAction.triggered.connect(self.close_application)
         self.show()
-        
+
     def close_application(self):
-        print("Whooaaaa so custome!!!")
+        #print("Whooaaaa so custome!!!")
         sys.exit()
+
+        
+    def state_changed0(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_0.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_0.text())
+
+    def state_changed1(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_1.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_1.text())   
+
+    def state_changed2(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_2.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_2.text())
+        
+    def state_changed3(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_3.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_3.text())
+        
+    def state_changed4(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_4.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_4.text())
+        
+    def state_changed5(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_5.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_5.text())
+        
+    def state_changed6(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_6.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_6.text())
+        
+    def state_changed7(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_7.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_7.text())
+        
+    def state_changed8(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_8.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_8.text())
+        
+    def state_changed9(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_9.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_9.text())
+        
+    def state_changed10(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_10.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_10.text())
+        
+    def state_changed11(self):
+        if self.checkBoxString == "":
+            self.checkBoxString = str(self.cb_11.text())
+        else:
+            self.checkBoxString = self.checkBoxString + " " + str(self.cb_11.text())
+
 
 
         
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
-    def __init__(self, searchStr, parent=None):
-        print "Constructing Result window"
+    def __init__(self, checkBoxStr, searchStr, parent=None):
+        #print "Constructing Result window"
         self.searchString = searchStr
-        print self.searchString
-        print "String to search: ", self.searchString
+        #print self.searchString
+        #print "String to search: ", self.searchString
         super(ResultWindow, self).__init__(parent)
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
         self.setupUi(self)
+        self.lbl_SearchResult.setText("%s" % searchStr)
+        self.lbl_CheckboxResult.setText("%s" % checkBoxStr)
         self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
         self.btn_restaurant2.clicked.connect(self.handleRestaurantButton)
         self.btn_restaurant3.clicked.connect(self.handleRestaurantButton)

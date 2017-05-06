@@ -79,42 +79,42 @@
    </property>
    <layout class="QGridLayout" name="ChoiceGrid_1">
     <item row="5" column="0">
-     <widget class="QCheckBox" name="cb_Japanese">
+     <widget class="QCheckBox" name="cb_5">
       <property name="text">
        <string>Japanese</string>
       </property>
      </widget>
     </item>
     <item row="3" column="0">
-     <widget class="QCheckBox" name="cb_Indonesian">
+     <widget class="QCheckBox" name="cb_3">
       <property name="text">
        <string>Indonesian</string>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QCheckBox" name="cb_French">
+     <widget class="QCheckBox" name="cb_1">
       <property name="text">
        <string>French</string>
       </property>
      </widget>
     </item>
     <item row="0" column="0">
-     <widget class="QCheckBox" name="cb_Chinese">
+     <widget class="QCheckBox" name="cb_0">
       <property name="text">
        <string>Chinese</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QCheckBox" name="cb_Indian">
+     <widget class="QCheckBox" name="cb_2">
       <property name="text">
        <string>Indian</string>
       </property>
      </widget>
     </item>
     <item row="4" column="0">
-     <widget class="QCheckBox" name="cb_Italian">
+     <widget class="QCheckBox" name="cb_4">
       <property name="text">
        <string>Italian</string>
       </property>
@@ -133,44 +133,44 @@
    </property>
    <layout class="QGridLayout" name="ChoiceGrid_2">
     <item row="5" column="0">
-     <widget class="QCheckBox" name="cb_Vietnamese">
+     <widget class="QCheckBox" name="cb_11">
       <property name="text">
        <string>Vietnamese</string>
       </property>
      </widget>
     </item>
     <item row="3" column="0">
-     <widget class="QCheckBox" name="cb_Taiwanese">
+     <widget class="QCheckBox" name="cb_9">
       <property name="text">
        <string>Taiwanese</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QCheckBox" name="cb_Lebanese">
-      <property name="text">
-       <string>Lebanese</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="0">
-     <widget class="QCheckBox" name="cb_Korean">
+     <widget class="QCheckBox" name="cb_6">
       <property name="text">
        <string>Korean</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QCheckBox" name="cb_Mexican">
+     <widget class="QCheckBox" name="cb_8">
       <property name="text">
        <string>Mexican</string>
       </property>
      </widget>
     </item>
     <item row="4" column="0">
-     <widget class="QCheckBox" name="cb_Thai">
+     <widget class="QCheckBox" name="cb_10">
       <property name="text">
        <string>Thai</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="cb_7">
+      <property name="text">
+       <string>Lebanese</string>
       </property>
      </widget>
     </item>
@@ -211,24 +211,8 @@
  <connections>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked()</signal>
-   <receiver>bar_Search</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>455</x>
-     <y>76</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>275</x>
-     <y>76</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Korean</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_6</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -243,8 +227,8 @@
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Lebanese</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_7</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -252,15 +236,15 @@
      <y>74</y>
     </hint>
     <hint type="destinationlabel">
-     <x>367</x>
-     <y>160</y>
+     <x>126</x>
+     <y>18</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Mexican</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_8</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -269,14 +253,14 @@
     </hint>
     <hint type="destinationlabel">
      <x>341</x>
-     <y>192</y>
+     <y>172</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Taiwanese</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_9</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -285,14 +269,14 @@
     </hint>
     <hint type="destinationlabel">
      <x>325</x>
-     <y>228</y>
+     <y>214</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Thai</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_10</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -307,8 +291,8 @@
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Vietnamese</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_11</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -323,8 +307,8 @@
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Chinese</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_0</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -339,8 +323,8 @@
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_French</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_1</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -355,8 +339,8 @@
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Indian</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_2</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -371,8 +355,8 @@
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Indonesian</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_3</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -387,8 +371,8 @@
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Italian</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_4</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -403,8 +387,8 @@
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Japanese</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_5</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -419,8 +403,8 @@
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Chinese</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_0</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -435,8 +419,8 @@
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_French</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_1</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -452,7 +436,7 @@
   <connection>
    <sender>radioButton</sender>
    <signal>clicked(bool)</signal>
-   <receiver>cb_Indian</receiver>
+   <receiver>cb_2</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -467,8 +451,8 @@
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Indonesian</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_3</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -483,8 +467,8 @@
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Italian</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_4</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -499,8 +483,8 @@
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Japanese</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_5</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -515,8 +499,8 @@
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Korean</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_6</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -531,8 +515,8 @@
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Lebanese</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_7</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -540,15 +524,15 @@
      <y>101</y>
     </hint>
     <hint type="destinationlabel">
-     <x>347</x>
-     <y>165</y>
+     <x>106</x>
+     <y>23</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Mexican</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_8</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -557,14 +541,14 @@
     </hint>
     <hint type="destinationlabel">
      <x>410</x>
-     <y>191</y>
+     <y>171</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Taiwanese</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_9</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -573,14 +557,14 @@
     </hint>
     <hint type="destinationlabel">
      <x>310</x>
-     <y>225</y>
+     <y>211</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Thai</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_10</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -589,14 +573,14 @@
     </hint>
     <hint type="destinationlabel">
      <x>396</x>
-     <y>261</y>
+     <y>253</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_Vietnamese</receiver>
+   <signal>toggled(bool)</signal>
+   <receiver>cb_11</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -611,7 +595,7 @@
   </connection>
   <connection>
    <sender>btn_Search</sender>
-   <signal>clicked(bool)</signal>
+   <signal>toggled(bool)</signal>
    <receiver>radioButton</receiver>
    <slot>setChecked(bool)</slot>
    <hints>
@@ -622,6 +606,22 @@
     <hint type="destinationlabel">
      <x>249</x>
      <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_Search</sender>
+   <signal>released()</signal>
+   <receiver>bar_Search</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>350</x>
+     <y>60</y>
     </hint>
    </hints>
   </connection>
