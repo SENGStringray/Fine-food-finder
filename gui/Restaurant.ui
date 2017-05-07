@@ -29,224 +29,38 @@
    <iconset>
     <normaloff>Icon.png</normaloff>Icon.png</iconset>
   </property>
-  <widget class="QLabel" name="restaurantName">
+  <widget class="QLabel" name="lbl_restName">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>3</y>
-     <width>191</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Sawasdee</family>
-     <pointsize>18</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Restaurant Name</string>
-   </property>
-  </widget>
-  <widget class="Line" name="line">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>80</y>
-     <width>371</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QWidget" name="widget_2" native="true">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>90</y>
-     <width>301</width>
-     <height>221</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>13</pointsize>
-    </font>
-   </property>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>161</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Menu</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="menu_2">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>20</y>
-      <width>301</width>
-      <height>201</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <italic>false</italic>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::VLine</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QLabel" name="restaurantAddress">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
+     <x>50</x>
      <y>30</y>
-     <width>331</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Address</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="tradingHours">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>60</y>
-     <width>411</width>
-     <height>25</height>
+     <width>371</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>10</pointsize>
-     <italic>false</italic>
+     <pointsize>20</pointsize>
     </font>
    </property>
-   <item>
-    <property name="text">
-     <string>Trading Hours</string>
-    </property>
-   </item>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
-  <widget class="QWidget" name="widget" native="true">
+  <widget class="QLabel" name="lbl_restDetails">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>50</x>
      <y>90</y>
-     <width>181</width>
-     <height>221</height>
+     <width>411</width>
+     <height>171</height>
     </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>13</pointsize>
-    </font>
-   </property>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>161</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Features:</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="tags_2">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>20</y>
-      <width>181</width>
-      <height>201</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-      <italic>false</italic>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::HLine</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-    <property name="overwriteMode">
-     <bool>true</bool>
-    </property>
-    <property name="acceptRichText">
-     <bool>true</bool>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QLabel" name="restaurantRating">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>10</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>25</pointsize>
-    </font>
    </property>
    <property name="text">
-    <string>Rating</string>
+    <string>Restaurant details</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::PlainText</enum>
    </property>
   </widget>
  </widget>

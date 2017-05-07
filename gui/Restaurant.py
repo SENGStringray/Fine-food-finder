@@ -50,13 +50,3 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "FoodFinder", None))
         self.lbl_restDetails.setText(_translate("Form", "Restaurant details", None))
 
-
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    Form = QtGui.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())
-
