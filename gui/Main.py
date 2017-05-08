@@ -1,5 +1,6 @@
 import sys
 import re
+import os
 from PyQt4 import QtCore, QtGui, uic
 
 Ui_MainWindow, QtBaseClass = uic.loadUiType("Search.ui")
@@ -15,6 +16,10 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.bar_Search.textChanged.connect(self.handleSearchTextChanged)
 		self.searchString = ""
 		self.checkBoxString = ""
+                
+                btn = QtGui.QPushButton('Exit', self)
+                btn.clicked.connect(self.close_application)
+                btn.resize(60, 30)
 
 		self.cb_0.stateChanged.connect(self.state_changed0)
 		self.cb_1.stateChanged.connect(self.state_changed1)
@@ -130,7 +135,11 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 	def __init__(self, checkBoxStr, searchStr, parent=None):
-		#print "Constructing Result window"
+
+
+
+
+                #print "Constructing Result window"
 		self.searchString = searchStr
 		#print self.searchString
 		#print "String to search: ", self.searchString
@@ -142,8 +151,12 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
 		self.btn_restaurant2.clicked.connect(self.handleRestaurantButton)
 		self.btn_restaurant3.clicked.connect(self.handleRestaurantButton)
+                btn = QtGui.QPushButton('Exit', self)
+                btn.clicked.connect(self.close_application)
+                btn.resize(50, 30)
 
 
+                
 	def handleRestaurantButton(self):
 		window.NewSearch = RestaurantWindow(self)
 		resName = self.sender()
@@ -152,6 +165,10 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		# window.NewSearch.lbl_restName.setText("%s" % str(resName.text()))
 		window.NewSearch.show()
 
+
+	def close_application(self):
+		sys.exit()
+                
 class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 	def __init__(self, parent=None):
 		super(RestaurantWindow, self).__init__(parent)
