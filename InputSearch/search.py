@@ -57,7 +57,14 @@ for fileN in glob.glob(path):
 	f.close
 
 # printing all results.
-sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.name)
+print("sort by ? name, price or rating")
+sort_option = sys.stdin.readline()
+if (sort_option == "price") :
+	sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.name)
+elif (sort_option = "price") :
+	sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.price)
+else :
+	sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.rating)
 for rest in arrOfRestuarants:
 	print rest.name
          
