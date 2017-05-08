@@ -67,4 +67,5 @@ else :
 	sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.rating)
 for rest in arrOfRestuarants:
 	print rest.name
+# proving sorted and glob.glob function in dafny is going to be a pain
          
