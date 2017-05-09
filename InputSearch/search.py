@@ -21,8 +21,9 @@ for line in sys.stdin.readline():
 
 searchString = searchString.rstrip()
 arrayOfSelectedCat = []
-path = "/Users/justindaerolee/School/seng2011/project/rest" # write the path
-path = path + "/*.txt"
+#path = "/Users/justindaerolee/School/seng2011/project/rest" # write the path
+#path = path + "/*.txt"
+path = "../Restaurants/*.txt"
 arrOfRestuarants = []
 for fileN in glob.glob(path): 
 	f  = open(fileN, 'r')
