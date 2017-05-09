@@ -61,7 +61,7 @@ for fileN in glob.glob(path):
 
 # printing all results.
 print("sort by ? name, price or rating")
-sort_option = sys.stdin.readline()
+sort_option = sys.stdin.readline().rstrip
 if (sort_option == "price") :
 	sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.name)
 elif (sort_option == "price") :
