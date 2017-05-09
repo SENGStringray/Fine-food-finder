@@ -13,7 +13,9 @@ class Restuarant:
 
 #search string and category button input uses stdin
 #change accordingly later
+print("Enter search String")
 searchString = sys.stdin.readline()
+print("Enter search categories, or press cntrl+d")
 for line in sys.stdin.readline():
 	line.rstrip()
 	arrayOfSelectedCat.append(line)
@@ -62,7 +64,7 @@ print("sort by ? name, price or rating")
 sort_option = sys.stdin.readline()
 if (sort_option == "price") :
 	sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.name)
-elif (sort_option = "price") :
+elif (sort_option == "price") :
 	sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.price)
 else :
 	sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.rating)
