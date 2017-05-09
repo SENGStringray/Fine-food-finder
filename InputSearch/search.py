@@ -13,7 +13,9 @@ class Restuarant:
 
 #search string and category button input uses stdin
 #change accordingly later
+print("Enter search String")
 searchString = sys.stdin.readline()
+print("Enter search categories, or press cntrl+d")
 for line in sys.stdin.readline():
 	line.rstrip()
 	arrayOfSelectedCat.append(line)
