@@ -162,43 +162,63 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		price = ""
 		arrOfRestaurants = []
 		path = "../Restaurants/*"
-		for fileN in glob.glob(path):
-			f = open(fileN, 'r')
-			content = f.readline()
-			while (content):
-				mName = re.match("^Name:\s(.+)$", content, re.M|re.I)
-				if (mName):
-					name = mName.group(1)
-				mRating = re.match("^Rating:\s(.+)$", content, re.M|re.I)
-				if (mRating):
-					rating = mRating.group(1)
-				mPrice = re.match("^Price Range:\s(.+)$", content, re.M|re.I)
-				if (mPrice):
-					price = mPrice.group(1)
-				#find if it is a match
-				# mSearch = ("^Categories:\s(.+)$", content, re.M|re.I)
-				# if (mSearch):
-					# categories = mSearch.group(1)
-				# if
-				content = f.readline()
-			f.close()
-			# print name
-			rest_object = Restaurant(name, price, rating)
-			arrOfRestaurants.append(rest_object)
+		searchString = searchString.rstrip()
+		arrayOfSelectedCat = []
 
-			item = QtGui.QListWidgetItem()
+		for fileN in glob.glob(path): 
+			f  = open(fileN, 'r')
+			content = f.read()
+			# initialising the Restuarant object
+			name = re.sub(r'.*?/', '', fileN)
+			m = re.search(r"Rating:\s*([0-9.]+)", content, re.I)
+			if (m) :
+				rating = m.group(1)
+			else :
+				print("ERROR: rating not found")
+				print(name)
+			m = re.search(r"Price Range:\s*\$([0-9.]+)", content, re.I)
+			if (m):
+				price = m.group(1)
+			else :
+				print("ERROR: price not found")
+				print(name)
+			rest_object = Restuarant(name, price, rating)
+			print rest_object
+			#Using the search string to verify the restuarant.
+			search_found = 0
+			match = re.search(searchString, content, re.I)
+			if (match):
+				arrOfRestuarants.append(rest_object)
+				search_found = 1
 
-			widget = QtGui.QWidget()
-			# widget.resize(100, 20)
-			# item.setSizeHint(widget.sizeHint())
-			widgetName = QtGui.QLabel(name)
-			# widgetName = QtGui.QPushButton(name)
-			widgetLayout = QtGui.QHBoxLayout()
-			widgetLayout.addWidget(widgetName)
-			widget.setLayout(widgetLayout)
+			#using the button input to verify the Restaurant.
+			for cat in arrayOfSelectedCat:
+				cat_match = re.search(r'category:.*?\W', cat)
+				if (cat_match and search_found == 0):
+					arrOfRestuarants.append(rest_object)
+			f.close
 
-			self.resultsList.addItem(item)
-			self.resultsList.setItemWidget(item, widget)
+		sort_option = "";
+		if (sort_option == "price") :
+			arrOfRestuarants = sorted(arrOfRestuarants, key=attrgetter('price')) 
+		elif (sort_option == "name") :
+			arrOfRestuarants = sorted(arrOfRestuarants, key=attrgetter('name'))
+		else :
+			arrOfRestuarants = sorted(arrOfRestuarants, key=attrgetter('rating'))
+			
+
+		item = QtGui.QListWidgetItem()
+
+		widget = QtGui.QWidget()
+		# widget.resize(100, 20)
+		# item.setSizeHint(widget.sizeHint())
+		widgetName = QtGui.QLabel(name)
+		# widgetName = QtGui.QPushButton(name)
+		widgetLayout = QtGui.QHBoxLayout()
+		widgetLayout.addWidget(widgetName)
+		widget.setLayout(widgetLayout)
+		self.resultsList.addItem(item)
+		self.resultsList.setItemWidget(item, widget)
 
 
 	def handleRestaurantButton(self):
