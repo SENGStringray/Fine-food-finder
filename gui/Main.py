@@ -1,18 +1,11 @@
-import sys, re, os, glob
+import sys
+import re
+import os
 from PyQt4 import QtCore, QtGui, uic
 
 Ui_MainWindow, QtBaseClass = uic.loadUiType("Search.ui")
 Ui_MainWindow1, QtBaseClass1 = uic.loadUiType("Result.ui")
 Ui_MainWindow2, QtBaseClass2 = uic.loadUiType("Restaurant.ui")
-
-class Restaurant:
-		def __init__(self, name, price, rating):
-				self.name = name
-				self.price = price
-				self.rating = rating
-
-		def __repr__(self):
-				return repr((self.name, self.price, self.rating))
 
 class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 	def __init__(self):
@@ -23,10 +16,10 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.bar_Search.textChanged.connect(self.handleSearchTextChanged)
 		self.searchString = ""
 		self.checkBoxString = ""
-
+                
                 btn = QtGui.QPushButton('Exit', self)
                 btn.clicked.connect(self.close_application)
-                btn.resize(60, 30)
+                btn.resize(50, 30)
 
 		self.cb_0.stateChanged.connect(self.state_changed0)
 		self.cb_1.stateChanged.connect(self.state_changed1)
@@ -153,7 +146,6 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		super(ResultWindow, self).__init__(parent)
 		self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 		self.setupUi(self)
-		self.find_matching_restaurants(searchStr, checkBoxStr)
 		self.lbl_SearchResult.setText("%s" % searchStr)
 		self.lbl_CheckboxResult.setText("%s" % checkBoxStr)
 		self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
@@ -163,47 +155,8 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
                 btn.clicked.connect(self.close_application)
                 btn.resize(50, 30)
 
-	def find_matching_restaurants(self, searchString, checkboxString):
-		name = ""
-		rating = ""
-		price = ""
-		arrOfRestaurants = []
-		path = "../Restaurants/*"
-		for fileN in glob.glob(path):
-			f = open(fileN, 'r')
-			content = f.readline()
-			while (content):
-				mName = re.match("^Name:\s(.+)$", content, re.M|re.I)
-				if (mName):
-					name = mName.group(1)
-				mRating = re.match("^Rating:\s(.+)$", content, re.M|re.I)
-				if (mRating):
-					rating = mRating.group(1)
-				mPrice = re.match("^Price Range:\s(.+)$", content, re.M|re.I)
-				if (mPrice):
-					price = mPrice.group(1)
-				#find if it is a match
-				# mSearch = ("^Categories:\s(.+)$", content, re.M|re.I)
-				# if (mSearch):
-					# categories = mSearch.group(1)
-				# if
-				content = f.readline()
-			f.close()
-			# print name
-			rest_object = Restaurant(name, price, rating)
-			arrOfRestaurants.append(rest_object)
 
-			item = QtGui.QListWidgetItem()
-			widget = QtGui.QWidget()
-			widgetName = QtGui.QLabel(name)
-			widgetLayout = QtGui.QHBoxLayout()
-			widgetLayout.addWidget(widgetName)
-			widget.setLayout(widgetLayout)
-
-			self.resultsList.addItem(item)
-			# self.resultsList.setItemWidget(item, widget)
-
-
+                
 	def handleRestaurantButton(self):
 		window.NewSearch = RestaurantWindow(self)
 		resName = self.sender()
@@ -215,7 +168,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 
 	def close_application(self):
 		sys.exit()
-
+                
 class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 	def __init__(self, parent=None):
 		super(RestaurantWindow, self).__init__(parent)
