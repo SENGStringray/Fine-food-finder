@@ -17,7 +17,7 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.bar_Search.textChanged.connect(self.handleSearchTextChanged)
 		self.searchString = ""
 		self.checkBoxString = ""
-                
+
                 btn = QtGui.QPushButton('Exit', self)
                 btn.clicked.connect(self.close_application)
                 btn.resize(50, 30)
@@ -156,6 +156,35 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
                 btn.clicked.connect(self.close_application)
                 btn.resize(50, 30)
 
+	def find_matching_restaurants(self, searchString, checkboxString):
+		name = ""
+		rating = ""
+		price = ""
+		arrOfRestaurants = []
+		path = "../Restaurants/*"
+		for fileN in glob.glob(path):
+			f = open(fileN, 'r')
+			content = f.readline()
+			while (content):
+				mName = re.match("^Name:\s(.+)$", content, re.M|re.I)
+				if (mName):
+					name = mName.group(1)
+				mRating = re.match("^Rating:\s(.+)$", content, re.M|re.I)
+				if (mRating):
+					rating = mRating.group(1)
+				mPrice = re.match("^Price Range:\s(.+)$", content, re.M|re.I)
+				if (mPrice):
+					price = mPrice.group(1)
+				#find if it is a match
+				# mSearch = ("^Categories:\s(.+)$", content, re.M|re.I)
+				# if (mSearch):
+					# categories = mSearch.group(1)
+				# if
+				content = f.readline()
+			f.close()
+			# print name
+			rest_object = Restaurant(name, price, rating)
+			arrOfRestaurants.append(rest_object)
 
 			item = QtGui.QListWidgetItem()
 
@@ -183,7 +212,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 
 	def close_application(self):
 		sys.exit()
-                
+
 class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 	def __init__(self, parent=None):
 		super(RestaurantWindow, self).__init__(parent)
