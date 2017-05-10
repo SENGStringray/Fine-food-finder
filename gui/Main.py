@@ -206,19 +206,18 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		else :
 			arrOfRestuarants = sorted(arrOfRestuarants, key=attrgetter('rating'))
 			
-
-		item = QtGui.QListWidgetItem()
-
-		widget = QtGui.QWidget()
-		# widget.resize(100, 20)
-		# item.setSizeHint(widget.sizeHint())
-		widgetName = QtGui.QLabel(name)
-		# widgetName = QtGui.QPushButton(name)
-		widgetLayout = QtGui.QHBoxLayout()
-		widgetLayout.addWidget(widgetName)
-		widget.setLayout(widgetLayout)
-		self.resultsList.addItem(item)
-		self.resultsList.setItemWidget(item, widget)
+		for sorted_rest in arrOfRestuarants :
+			item = QtGui.QListWidgetItem()
+			widget = QtGui.QWidget()
+			# widget.resize(100, 20)
+			# item.setSizeHint(widget.sizeHint())
+			widgetName = QtGui.QLabel(name)
+			# widgetName = QtGui.QPushButton(name)
+			widgetLayout = QtGui.QHBoxLayout()
+			widgetLayout.addWidget(widgetName)
+			widget.setLayout(widgetLayout)
+			self.resultsList.addItem(item)
+			self.resultsList.setItemWidget(item, widget)
 
 
 	def handleRestaurantButton(self):
