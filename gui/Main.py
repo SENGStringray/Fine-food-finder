@@ -157,13 +157,10 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
                 btn.resize(50, 30)
 
 	def find_matching_restaurants(self, searchString, checkboxString):
-		name = ""
-		rating = ""
-		price = ""
 		arrOfRestaurants = []
 		path = "../Restaurants/*"
 		searchString = searchString.rstrip()
-		arrayOfSelectedCat = []
+		arrayOfSelectedCat = [] # spilt the checkboxString
 
 		for fileN in glob.glob(path): 
 			f  = open(fileN, 'r')
