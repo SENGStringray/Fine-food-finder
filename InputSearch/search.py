@@ -43,9 +43,10 @@ for fileN in glob.glob(path):
 	m = re.search(r"Price Range:\s?\$([0-9.]+)", content)
 	if (m):
 		price = m.group(1)
-		print price
+		print fileN
 	else :
 		print("ERROR: price not found")
+		print(name)
 	rest_object = Restuarant(name, price, rating)
 
 	#Using the search string to verify the restuarant.
