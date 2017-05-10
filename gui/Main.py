@@ -1,12 +1,43 @@
 import sys
 import re
 import os
+import glob
 from operator import itemgetter, attrgetter, methodcaller
 from PyQt4 import QtCore, QtGui, uic
 
 Ui_MainWindow, QtBaseClass = uic.loadUiType("Search.ui")
 Ui_MainWindow1, QtBaseClass1 = uic.loadUiType("Result.ui")
 Ui_MainWindow2, QtBaseClass2 = uic.loadUiType("Restaurant.ui")
+
+
+class Restaurant:
+		def __init__(self, name, price, rating):
+				self.name = name
+				self.price = price
+				self.rating = rating
+
+		def __repr__(self):
+				return repr((self.name, self.price, self.rating))
+
+class QCustomQWidget (QtGui.QWidget):
+    def __init__ (self, parent = None):
+        super(QCustomQWidget, self).__init__(parent)
+        self.textQVBoxLayout = QtGui.QVBoxLayout()
+        self.textUpQLabel    = QtGui.QLabel()
+        self.textDownQLabel  = QtGui.QLabel()
+        self.textQVBoxLayout.addWidget(self.textUpQLabel)
+        self.textQVBoxLayout.addWidget(self.textDownQLabel)
+        self.allQHBoxLayout  = QtGui.QHBoxLayout()
+        # self.iconQLabel      = QtGui.QLabel()
+        # self.allQHBoxLayout.addWidget(self.iconQLabel, 0)
+        self.allQHBoxLayout.addLayout(self.textQVBoxLayout, 0)
+        self.setLayout(self.allQHBoxLayout)
+        # setStyleSheet
+    def setTextUp (self, text):
+        self.textUpQLabel.setText(text)
+
+    def setTextDown (self, text):
+        self.textDownQLabel.setText(text)
 
 class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 	def __init__(self):
@@ -147,6 +178,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		super(ResultWindow, self).__init__(parent)
 		self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 		self.setupUi(self)
+		self.find_matching_restaurants(searchStr, checkBoxStr)
 		self.lbl_SearchResult.setText("%s" % searchStr)
 		self.lbl_CheckboxResult.setText("%s" % checkBoxStr)
 		self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
@@ -164,7 +196,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		searchString = searchString.rstrip()
 		arrayOfSelectedCat = checkboxString.split() # spilt the checkboxString
 
-		for fileN in glob.glob(path): 
+		for fileN in glob.glob(path):
 			f  = open(fileN, 'r')
 			content = f.read()
 			# initialising the Restuarant object
@@ -181,40 +213,37 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 			else :
 				print("ERROR: price not found")
 				print(name)
-			rest_object = Restuarant(name, price, rating)
+			rest_object = Restaurant(name, price, rating)
 			print rest_object
 			#Using the search string to verify the restuarant.
 			search_found = 0
 			match = re.search(searchString, content, re.I)
 			if (match):
-				arrOfRestuarants.append(rest_object)
+				arrOfRestaurants.append(rest_object)
 				search_found = 1
 
 			#using the button input to verify the Restaurant.
 			for cat in arrayOfSelectedCat:
 				cat_match = re.search(r'category:.*?\W', cat)
 				if (cat_match and search_found == 0):
-					arrOfRestuarants.append(rest_object)
+					arrOfRestaurants.append(rest_object)
 			f.close
 
 		sort_option = "";
 		if (sort_option == "price") :
-			arrOfRestuarants = sorted(arrOfRestuarants, key=attrgetter('price')) 
+			arrOfRestaurants = sorted(arrOfRestaurants, key=attrgetter('price'))
 		elif (sort_option == "name") :
-			arrOfRestuarants = sorted(arrOfRestuarants, key=attrgetter('name'))
+			arrOfRestaurants = sorted(arrOfRestaurants, key=attrgetter('name'))
 		else :
-			arrOfRestuarants = sorted(arrOfRestuarants, key=attrgetter('rating'))
-			
-		for sorted_rest in arrOfRestuarants :
-			item = QtGui.QListWidgetItem()
-			widget = QtGui.QWidget()
-			# widget.resize(100, 20)
-			# item.setSizeHint(widget.sizeHint())
-			widgetName = QtGui.QLabel(name)
-			# widgetName = QtGui.QPushButton(name)
-			widgetLayout = QtGui.QHBoxLayout()
-			widgetLayout.addWidget(widgetName)
-			widget.setLayout(widgetLayout)
+			arrOfRestaurants = sorted(arrOfRestaurants, key=attrgetter('rating'))
+
+		for sorted_rest in arrOfRestaurants :
+			widget = QCustomQWidget()
+			widget.setTextUp(sorted_rest.name)
+			widget.setTextDown(sorted_rest.price)
+			item = QtGui.QListWidgetItem(self.resultsList)
+			item.setSizeHint(widget.sizeHint())
+
 			self.resultsList.addItem(item)
 			self.resultsList.setItemWidget(item, widget)
 
