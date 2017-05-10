@@ -25,9 +25,9 @@ class QCustomQWidget (QtGui.QWidget):
         super(QCustomQWidget, self).__init__(parent)
         self.textQVBoxLayout = QtGui.QVBoxLayout()
         self.textUpQLabel    = QtGui.QLabel()
-        self.textDownQLabel  = QtGui.QLabel()
+        # self.textDownQLabel  = QtGui.QLabel()
         self.textQVBoxLayout.addWidget(self.textUpQLabel)
-        self.textQVBoxLayout.addWidget(self.textDownQLabel)
+        # self.textQVBoxLayout.addWidget(self.textDownQLabel)
         self.allQHBoxLayout  = QtGui.QHBoxLayout()
         # self.iconQLabel      = QtGui.QLabel()
         # self.allQHBoxLayout.addWidget(self.iconQLabel, 0)
@@ -181,7 +181,8 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		self.setupUi(self)
 		self.find_matching_restaurants(searchStr, checkBoxStr)
 		# self.resultsList.currentItemChanged.connect(self.handleRestaurantButton(self.resultsList.current().widget.textUpQLabel))
-		self.resultsList.itemDoubleClicked.connect(self.dummy_print_func)
+		# self.resultsList.itemDoubleClicked.connect(self.handleRestaurantButton(self.resultsList.currentItem().text()))
+		self.resultsList.itemDoubleClicked.connect(self.open_restaurant)
 		# self.lbl_SearchResult.setText("%s" % searchStr)
 		# self.lbl_CheckboxResult.setText("%s" % checkBoxStr)
 		# self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
@@ -191,8 +192,9 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
                 btn.clicked.connect(self.close_application)
                 btn.resize(50, 30)
 
-	def dummy_print_func(self):
-		print "hello"
+	def open_restaurant(self, item):
+		# print item, str(item.text())
+		self.handleRestaurantButton(str(item.text()))
 
 
 	def find_matching_restaurants(self, searchString, checkboxString):
@@ -221,7 +223,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 				print("ERROR: price not found")
 				print(name)
 			rest_object = Restaurant(name, price, rating)
-			print rest_object
+			# print rest_object
 			#Using the search string to verify the restuarant.
 			search_found = 0
 			match = re.search(searchString, content, re.I)
@@ -245,17 +247,14 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 			arrOfRestaurants = sorted(arrOfRestaurants, key=attrgetter('rating'))
 
 		for sorted_rest in arrOfRestaurants :
-			widget = QCustomQWidget()
-			widget.setTextUp(sorted_rest.name)
-			widget.setTextDown(sorted_rest.price)
+			# widget = QCustomQWidget()
+			# widget.setTextUp(sorted_rest.name)
+			# widget.setTextDown(sorted_rest.price)
 			item = QtGui.QListWidgetItem(self.resultsList)
-			item.setSizeHint(widget.sizeHint())
+			item.setText(re.sub("-", ' ', sorted_rest.name))
+			# item.setSizeHint(widget.sizeHint())
 			self.resultsList.addItem(item)
-			self.resultsList.setItemWidget(item, widget)
-
-
-		# self.resultsList.connect(self.resultsList,SIGNAL("itemDoubleClicked(QListWidgetItem*)"), self.resultsList,SLOT(self.handleRestaurantButton('Black-Birch')))
-
+			# self.resultsList.setItemWidget(item, widget)
 
 	def handleRestaurantButton(self, name):
 		window.NewSearch = RestaurantWindow(self)
