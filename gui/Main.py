@@ -194,7 +194,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 
 	def open_restaurant(self, item):
 		# print item, str(item.text())
-		self.handleRestaurantButton(str(item.text()))
+		self.handleRestaurantButton(re.sub(' ', '-',str(item.text())))
 
 
 	def find_matching_restaurants(self, searchString, checkboxString):
