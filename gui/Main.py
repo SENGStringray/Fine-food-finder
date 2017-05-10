@@ -4,6 +4,7 @@ import os
 import glob
 from operator import itemgetter, attrgetter, methodcaller
 from PyQt4 import QtCore, QtGui, uic
+from PyQt4.QtCore import pyqtSlot, SIGNAL, SLOT
 
 Ui_MainWindow, QtBaseClass = uic.loadUiType("Search.ui")
 Ui_MainWindow1, QtBaseClass1 = uic.loadUiType("Result.ui")
@@ -179,14 +180,20 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 		self.setupUi(self)
 		self.find_matching_restaurants(searchStr, checkBoxStr)
-		self.lbl_SearchResult.setText("%s" % searchStr)
-		self.lbl_CheckboxResult.setText("%s" % checkBoxStr)
-		self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
-		self.btn_restaurant2.clicked.connect(self.handleRestaurantButton)
-		self.btn_restaurant3.clicked.connect(self.handleRestaurantButton)
+		# self.resultsList.currentItemChanged.connect(self.handleRestaurantButton(self.resultsList.current().widget.textUpQLabel))
+		self.resultsList.itemDoubleClicked.connect(self.dummy_print_func)
+		# self.lbl_SearchResult.setText("%s" % searchStr)
+		# self.lbl_CheckboxResult.setText("%s" % checkBoxStr)
+		# self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
+		# self.btn_restaurant2.clicked.connect(self.handleRestaurantButton('Black-Birch'))
+		# self.btn_restaurant3.clicked.connect(self.handleRestaurantButton)
                 btn = QtGui.QPushButton('Exit', self)
                 btn.clicked.connect(self.close_application)
                 btn.resize(50, 30)
+
+	def dummy_print_func(self):
+		print "hello"
+
 
 	def find_matching_restaurants(self, searchString, checkboxString):
 		print searchString
@@ -243,16 +250,18 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 			widget.setTextDown(sorted_rest.price)
 			item = QtGui.QListWidgetItem(self.resultsList)
 			item.setSizeHint(widget.sizeHint())
-
 			self.resultsList.addItem(item)
 			self.resultsList.setItemWidget(item, widget)
 
 
-	def handleRestaurantButton(self):
+		# self.resultsList.connect(self.resultsList,SIGNAL("itemDoubleClicked(QListWidgetItem*)"), self.resultsList,SLOT(self.handleRestaurantButton('Black-Birch')))
+
+
+	def handleRestaurantButton(self, name):
 		window.NewSearch = RestaurantWindow(self)
 		resName = self.sender()
 		# window.NewSearch.get_restaurant_data(resName.text())
-		window.NewSearch.get_restaurant_data('Black-Birch')
+		window.NewSearch.get_restaurant_data(name)
 		# window.NewSearch.lbl_restName.setText("%s" % str(resName.text()))
 		window.NewSearch.show()
 
