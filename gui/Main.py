@@ -157,6 +157,8 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
                 btn.resize(50, 30)
 
 	def find_matching_restaurants(self, searchString, checkboxString):
+		print searchString
+		print checkboxString
 		arrOfRestaurants = []
 		path = "../Restaurants/*"
 		searchString = searchString.rstrip()
