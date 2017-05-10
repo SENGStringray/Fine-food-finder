@@ -160,7 +160,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		arrOfRestaurants = []
 		path = "../Restaurants/*"
 		searchString = searchString.rstrip()
-		arrayOfSelectedCat = [] # spilt the checkboxString
+		arrayOfSelectedCat = checkboxString.split() # spilt the checkboxString
 
 		for fileN in glob.glob(path): 
 			f  = open(fileN, 'r')
