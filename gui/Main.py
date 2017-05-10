@@ -1,6 +1,7 @@
 import sys
 import re
 import os
+from operator import itemgetter, attrgetter, methodcaller
 from PyQt4 import QtCore, QtGui, uic
 
 Ui_MainWindow, QtBaseClass = uic.loadUiType("Search.ui")
