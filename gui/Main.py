@@ -152,8 +152,8 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		#print "String to search: ", self.searchString
 		super(ResultWindow, self).__init__(parent)
 		self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-		self.find_matching_restaurants(searchStr, checkBoxStr)
 		self.setupUi(self)
+		self.find_matching_restaurants(searchStr, checkBoxStr)
 		self.lbl_SearchResult.setText("%s" % searchStr)
 		self.lbl_CheckboxResult.setText("%s" % checkBoxStr)
 		self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
@@ -189,9 +189,10 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 				# if
 				content = f.readline()
 			f.close()
+			# print name
 			rest_object = Restaurant(name, price, rating)
 			arrOfRestaurants.append(rest_object)
-			
+
 			item = QtGui.QListWidgetItem()
 			widget = QtGui.QWidget()
 			widgetName = QtGui.QLabel(name)
@@ -200,7 +201,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 			widget.setLayout(widgetLayout)
 
 			self.resultsList.addItem(item)
-			self.resultsList.setItemWidget(item, widget)
+			# self.resultsList.setItemWidget(item, widget)
 
 
 	def handleRestaurantButton(self):
