@@ -13,5 +13,10 @@ class restaurant{
 	for fileN | fileN in ArrOfRestuarants{
 		Method print(fileN){return ;}
 	}
-	Method sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.name)
+
+
+	if sort_option = "price" {Method sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.name)}
+	else {Method sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.rating)}
+	forall rest | arrOfRestuarants {Method print() {print rest.name} }
+
 }
