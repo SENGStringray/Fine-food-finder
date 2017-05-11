@@ -50,9 +50,9 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.searchString = ""
 		self.checkBoxString = ""
 
-        btn = QtGui.QPushButton('Exit', self)
-        btn.clicked.connect(self.close_application)
-        btn.resize(50, 30)
+        		btn = QtGui.QPushButton('Exit', self)
+       			btn.clicked.connect(self.close_application)
+        		btn.resize(50, 30)
 
 		for num in range(0,12):
 			checkBox = 'self.cb_' + str(num) + '.stateChanged.connect(self.state_changed' + str(num) + ')'
