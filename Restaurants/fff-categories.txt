@@ -1,0 +1,9 @@
+Dining Party: Large-Groups, Child-Friendly, Takeaway, Pet-Friendly, 
+Cuisine: Cafe, Chinese, Burgers, American, Fusion, Dessert, Pizza, Italian, Lebanese, Barbeque, Japanese, Indian, Seafood, Indonesian, Finger-Food, Breakfast
+Dietary: Vegetarian-Friendly, Vegan-Friendly, Halal, Gluten-Free, Vegetarian
+Style: Casual-Dining, Cozy, Modern, Fine-Dining, Fast-Food, Authentic, Street-Style
+Extras: Wheelchair-Accessible, Bookings-Accepted, Bar, BYO, Cash-Only, Smoking-Area, Functions, Outdoor-Area, Beer-Garden, Home-Delivery
+
+Anything under price range $20 for one person = cheap eats/budget
+View: View-Waterfront, View-Beachfront
+Takeaway + cheapeats = suitable for solo
