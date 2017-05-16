@@ -299,11 +299,14 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 	def find_matching_restaurants(self, searchString, checkboxString):
 		print searchString
 		print checkboxString
-		arrOfRestaurants = []
+		sort_option = ""
+		
 		path = "../Restaurants/*"
 		searchString = searchString.rstrip()
+		checkboxString = checkboxString.rstrip()
 		arrayOfSelectedCat = checkboxString.split() # spilt the checkboxString
 
+		arrOfRestaurants = []
 		for fileN in glob.glob(path):
 			f  = open(fileN, 'r')
 			content = f.read()
@@ -315,37 +318,66 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 			else :
 				print("ERROR: rating not found")
 				print(name)
+				continue
 			m = re.search(r"Price Range:\s*\$([0-9.]+)", content, re.I)
 			if (m):
 				price = m.group(1)
 			else :
 				print("ERROR: price not found")
 				print(name)
+				continue
+
 			rest_object = Restaurant(name, price, rating)
-			# print rest_object
+			# searching based on checkbox String
+			# intersection of checked boxes
+
+			## change the category cause the category is changing
+			category_found = 1
+			if (checkboxString != "") :
+				for cat in arrayOfSelectedCat:
+					# category is changed into different categories fix this.
+					cat_match = re.search(cat, content, re.I)
+					if (cat_match== None):
+						category_found = 0
+						break
 			#Using the search string to verify the restuarant.
 			search_found = 0
-			match = re.search(searchString, content, re.I)
-			if (match):
+			if (category_found == 1) :
+				if (searchString == "") :
+					search_found = 1
+				else :
+					match = re.search(searchString, content, re.I)
+					if (match):
+						search_found = 1
+			if (search_found and category_found) :
 				arrOfRestaurants.append(rest_object)
-				search_found = 1
 
-			#using the button input to verify the Restaurant.
-			for cat in arrayOfSelectedCat:
-				cat_match = re.search(r'category:.*?\W', cat)
-				if (cat_match and search_found == 0):
-					arrOfRestaurants.append(rest_object)
 			f.close
-
-		sort_option = "";
+			
+		sortedList = []
 		if (sort_option == "price") :
-			arrOfRestaurants = sorted(arrOfRestaurants, key=attrgetter('price'))
+			while len(arrOfRestaurants) > 0:
+				res = arrOfRestaurants[0]
+				for element in arrOfRestaurants :
+					if (float(element.price) < float(res.price)) :
+						res = element
+				sortedList.append(arrOfRestaurants.pop(arrOfRestaurants.index(res)))
 		elif (sort_option == "name") :
-			arrOfRestaurants = sorted(arrOfRestaurants, key=attrgetter('name'))
+			while len(arrOfRestaurants) > 0:
+				res = arrOfRestaurants[0]
+				for element in arrOfRestaurants :
+					if (element.name < res.name) :
+						res = element
+				sortedList.append(arrOfRestaurants.pop(arrOfRestaurants.index(res)))
 		else :
-			arrOfRestaurants = sorted(arrOfRestaurants, key=attrgetter('rating'))
+			while len(arrOfRestaurants) > 0:
+				res = arrOfRestaurants[0]
+				for element in arrOfRestaurants :
+					if (float(element.rating) < float(res.rating)) :
+						res = element
+				sortedList.append(arrOfRestaurants.pop(arrOfRestaurants.index(res)))
 
-		for sorted_rest in arrOfRestaurants :
+		for sorted_rest in sortedList :
 			# widget = QCustomQWidget()
 			# widget.setTextUp(sorted_rest.name)
 			# widget.setTextDown(sorted_rest.price)
