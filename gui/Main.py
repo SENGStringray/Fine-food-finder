@@ -51,7 +51,7 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.searchString = ""
 		self.priceString = ""
 		self.checkBoxString = ""
-		self.viewString = "Any" #Default 'Any'
+		self.viewString = "Any" #Default is 'Any'
 
 		btn = QtGui.QPushButton('Exit', self)
 		btn.clicked.connect(self.close_application)
@@ -74,6 +74,11 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.rbtn_View_2.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_2))
 		self.rbtn_View_3.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_3))
 		self.rbtn_View_4.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_4))
+
+		#Ensure only numbers are passed into the price box
+		regexp = QtCore.QRegExp('^0|[1-9][0-9]{2}$')
+		validator = QtGui.QRegExpValidator(regexp)
+		self.bar_Price.setValidator(validator)
 
 		mainMenu = self.menuBar()
 		fileMenu = mainMenu.addMenu('&File')
