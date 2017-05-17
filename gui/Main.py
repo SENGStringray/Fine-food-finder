@@ -51,21 +51,29 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.searchString = ""
 		self.priceString = ""
 		self.checkBoxString = ""
-		self.viewString = ""
+		self.viewString = "Any" #Default 'Any'
 
 		btn = QtGui.QPushButton('Exit', self)
 		btn.clicked.connect(self.close_application)
 		btn.resize(50, 30)
 
-		for num in range(0,12):
-			checkBox = 'self.cb_' + str(num) + '.stateChanged.connect(self.state_changed' + str(num) + ')'
-			exec(checkBox)
+		self.cb_0.stateChanged.connect(lambda:self.cbstate_changed(self.cb_0))
+		self.cb_1.stateChanged.connect(lambda:self.cbstate_changed(self.cb_1))
+		self.cb_2.stateChanged.connect(lambda:self.cbstate_changed(self.cb_2))
+		self.cb_3.stateChanged.connect(lambda:self.cbstate_changed(self.cb_3))
+		self.cb_4.stateChanged.connect(lambda:self.cbstate_changed(self.cb_4))
+		self.cb_5.stateChanged.connect(lambda:self.cbstate_changed(self.cb_5))
+		self.cb_6.stateChanged.connect(lambda:self.cbstate_changed(self.cb_6))
+		self.cb_7.stateChanged.connect(lambda:self.cbstate_changed(self.cb_7))
+		self.cb_8.stateChanged.connect(lambda:self.cbstate_changed(self.cb_8))
+		self.cb_9.stateChanged.connect(lambda:self.cbstate_changed(self.cb_9))
+		self.cb_10.stateChanged.connect(lambda:self.cbstate_changed(self.cb_10))
+		self.cb_11.stateChanged.connect(lambda:self.cbstate_changed(self.cb_11))
 
-		for num in range(1,5):
-			#radios=["rbtn_View_1","rbtn_View_2","rbtn_View_3","rbtn_View_4"]
-			selected_radio = self.findChild(QtGui.QRadioButton, "rbtn_View_"+str(num))#self.radios[num])
-			if selected_radio.isChecked():
-				self.viewString = selected_radio.text()
+		self.rbtn_View_1.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_1))
+		self.rbtn_View_2.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_2))
+		self.rbtn_View_3.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_3))
+		self.rbtn_View_4.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_4))
 
 		mainMenu = self.menuBar()
 		fileMenu = mainMenu.addMenu('&File')
@@ -95,187 +103,23 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		#print("Whooaaaa so custome!!!")
 		sys.exit()
 
-	def state_changed0(self):
-		if (self.cb_0.isChecked()):
+	def rbtnState_changed(self, button):
+		self.viewString = button.text()
+
+	def cbstate_changed(self, button):
+		if (button.isChecked()):
 			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_0.text())
+				self.checkBoxString = button.text()
 			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_0.text())
+				self.checkBoxString = self.checkBoxString + " " + button.text()
 		else:
 			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_0.text(), "")
-			elif (self.checkBoxString == str(self.cb_0.text())):
+				self.checkBoxString = self.checkBoxString.replace(button.text(), "")
+			elif (self.checkBoxString == button.text()):
 				  self.checkBoxString = ""
 			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_0.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_0.text(), "")
-
-	def state_changed1(self):
-		if (self.cb_1.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_1.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_1.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_1.text(), "")
-			elif (self.checkBoxString == str(self.cb_1.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_1.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_1.text(), "")
-
-	def state_changed2(self):
-		if (self.cb_2.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_2.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_2.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_2.text(), "")
-			elif (self.checkBoxString == str(self.cb_2.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_2.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_2.text(), "")
-
-	def state_changed3(self):
-		if (self.cb_3.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_3.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_3.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_3.text(), "")
-			elif (self.checkBoxString == str(self.cb_3.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_3.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_3.text(), "")
-
-	def state_changed4(self):
-		if (self.cb_4.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_4.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_4.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_4.text(), "")
-			elif (self.checkBoxString == str(self.cb_4.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_4.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_4.text(), "")
-
-	def state_changed5(self):
-		if (self.cb_5.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_5.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_5.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_5.text(), "")
-			elif (self.checkBoxString == str(self.cb_5.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_5.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_5.text(), "")
-
-	def state_changed6(self):
-		if (self.cb_6.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_6.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_6.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_6.text(), "")
-			elif (self.checkBoxString == str(self.cb_6.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_6.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_6.text(), "")
-
-	def state_changed7(self):
-		if (self.cb_7.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_7.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_7.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_7.text(), "")
-			elif (self.checkBoxString == str(self.cb_7.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_7.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_7.text(), "")
-
-	def state_changed8(self):
-		if (self.cb_8.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_8.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_8.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_8.text(), "")
-			elif (self.checkBoxString == str(self.cb_8.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_8.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_8.text(), "")
-
-	def state_changed9(self):
-		if (self.cb_9.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_9.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_9.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_9.text(), "")
-			elif (self.checkBoxString == str(self.cb_9.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_9.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_9.text(), "")
-
-	def state_changed10(self):
-		if (self.cb_10.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_10.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_10.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_10.text(), "")
-			elif (self.checkBoxString == str(self.cb_10.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_10.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_10.text(), "")
-
-	def state_changed11(self):
-		if (self.cb_11.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = str(self.cb_11.text())
-			else:
-				self.checkBoxString = self.checkBoxString + " " + str(self.cb_11.text())
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(self.cb_11.text(), "")
-			elif (self.checkBoxString == str(self.cb_11.text())):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(self.cb_11.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + self.cb_11.text(), "")
-
-
+				self.checkBoxString = self.checkBoxString.replace(button.text() + " ", "")
+				self.checkBoxString = self.checkBoxString.replace(" " + button.text(), "")
 
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 	def __init__(self, checkBoxStr, searchStr, priceStr, viewStr, parent=None):
