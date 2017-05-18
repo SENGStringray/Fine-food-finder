@@ -208,26 +208,6 @@
     <string>Exit</string>
    </property>
   </widget>
-  <widget class="QFontComboBox" name="Tourist">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>80</y>
-     <width>371</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QFontComboBox" name="style">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>180</y>
-     <width>371</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="bar_Price">
    <property name="geometry">
     <rect>
@@ -254,14 +234,14 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>67</x>
      <y>80</y>
-     <width>68</width>
-     <height>17</height>
+     <width>111</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>Tourist</string>
+    <string>Dining Party</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -290,16 +270,6 @@
     <string>Restaurant Name:</string>
    </property>
   </widget>
-  <widget class="QFontComboBox" name="fontComboBox">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>130</y>
-     <width>371</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
@@ -310,7 +280,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>Cuisine</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
@@ -324,26 +294,6 @@
    </property>
    <property name="text">
     <string>Dietary</string>
-   </property>
-  </widget>
-  <widget class="QFontComboBox" name="Diatary">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>230</y>
-     <width>371</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QFontComboBox" name="Extras">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>280</y>
-     <width>371</width>
-     <height>31</height>
-    </rect>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
@@ -362,9 +312,9 @@
   <widget class="QRadioButton" name="rbtn_View_3">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>340</x>
      <y>330</y>
-     <width>91</width>
+     <width>111</width>
      <height>22</height>
     </rect>
    </property>
@@ -375,9 +325,9 @@
   <widget class="QRadioButton" name="rbtn_View_4">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>460</x>
      <y>330</y>
-     <width>91</width>
+     <width>111</width>
      <height>22</height>
     </rect>
    </property>
@@ -417,7 +367,7 @@
   <widget class="QRadioButton" name="rbtn_View_2">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>260</x>
      <y>330</y>
      <width>71</width>
      <height>22</height>
@@ -426,6 +376,266 @@
    <property name="text">
     <string>Scenic</string>
    </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>80</y>
+     <width>361</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Large-Group</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Pet-Friendly</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Take-away</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Child-Friendly</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>120</y>
+     <width>361</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Cafe</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Chinese</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Burgers</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>American</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Fusion</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dessert</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Pizza</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Italian</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Lebanese</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Barbeque</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Japanese</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Indian</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Seafood</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Indonesian</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Finger-Food</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Breakfast</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_3">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>180</y>
+     <width>361</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Casual-Dining</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Cozy</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Modern</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Fine-dining</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Fast-food</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Authentic</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Street Style</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_4">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>240</y>
+     <width>361</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Vegetarian-Friendly</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Vegan-Friendly</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Halal</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Gluten-Free</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Vegetarian</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_5">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>290</y>
+     <width>351</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Wheelchair-Accessible</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bookings-Accepted</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bar</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>BYO</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Cash-Only</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Smoking-Area</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Functions</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Outdoor-Area</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Beer-Garden</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Home-Delivery</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <tabstops>
