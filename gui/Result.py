@@ -31,9 +31,6 @@ class Ui_Form(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(_fromUtf8("Icon.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Form.setWindowIcon(icon)
-        self.pushButton = QtGui.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(0, 0, 41, 21))
-        self.pushButton.setObjectName(_fromUtf8("pushButton"))
         self.resultsList = QtGui.QListWidget(Form)
         self.resultsList.setGeometry(QtCore.QRect(20, 80, 761, 521))
         self.resultsList.setMinimumSize(QtCore.QSize(50, 20))
@@ -59,6 +56,5 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(_translate("Form", "FoodFinder", None))
-        self.pushButton.setText(_translate("Form", "Exit", None))
         self.label.setText(_translate("Form", "Here is a list of restaurants just for you", None))
 

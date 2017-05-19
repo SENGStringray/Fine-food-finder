@@ -29,19 +29,6 @@
    <iconset>
     <normaloff>Icon.png</normaloff>Icon.png</iconset>
   </property>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>41</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Exit</string>
-   </property>
-  </widget>
   <widget class="QListWidget" name="resultsList">
    <property name="geometry">
     <rect>

@@ -245,8 +245,8 @@
   <widget class="QLabel" name="restaurantRating">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>10</y>
+     <x>650</x>
+     <y>30</y>
      <width>141</width>
      <height>50</height>
     </rect>
@@ -261,12 +261,12 @@
     <string>Rating</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="userReview">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>420</y>
-     <width>171</width>
+     <width>111</width>
      <height>21</height>
     </rect>
    </property>
@@ -282,7 +282,7 @@
     <string>Leave a review!</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTextEdit" name="usrReview">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -290,6 +290,12 @@
      <width>181</width>
      <height>171</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Monospace</family>
+     <pointsize>10</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -313,7 +319,7 @@
     <string>What have other people had to say?</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="lbl_restMenu_2">
+  <widget class="QTextEdit" name="comments">
    <property name="geometry">
     <rect>
      <x>180</x>
@@ -325,7 +331,7 @@
    <property name="font">
     <font>
      <family>Sawasdee</family>
-     <pointsize>11</pointsize>
+     <pointsize>10</pointsize>
      <italic>false</italic>
     </font>
    </property>
@@ -339,6 +345,70 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="thumbsUp">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>540</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="thumbsDown">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>570</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>30</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="thumbsUpBtn">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>540</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="thumbsDownBtn">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>570</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+  <zorder>thumbsDownBtn</zorder>
+  <zorder>thumbsUpBtn</zorder>
   <zorder>lbl_restName</zorder>
   <zorder>line</zorder>
   <zorder>widget_2</zorder>
@@ -346,10 +416,12 @@
   <zorder>widget</zorder>
   <zorder>restaurantRating</zorder>
   <zorder>lbl_restAddress</zorder>
-  <zorder>label</zorder>
-  <zorder>textEdit</zorder>
+  <zorder>userReview</zorder>
+  <zorder>usrReview</zorder>
   <zorder>label_2</zorder>
-  <zorder>lbl_restMenu_2</zorder>
+  <zorder>comments</zorder>
+  <zorder>thumbsUp</zorder>
+  <zorder>thumbsDown</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -58,7 +58,7 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		btn = QtGui.QPushButton('Exit', self)
 		btn.clicked.connect(self.close_application)
 		btn.resize(50, 30)
-
+		btn.move(750, 0)
 
 
 
@@ -88,8 +88,8 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		validator = QtGui.QRegExpValidator(regexp)
 		self.bar_Price.setValidator(validator)
 
-		mainMenu = self.menuBar()
-		fileMenu = mainMenu.addMenu('&File')
+		# mainMenu = self.menuBar()
+		# fileMenu = mainMenu.addMenu('&File')
 		#fileMenu.addAction(extractAction)
 
 	def handleSearchButton(self):
@@ -162,6 +162,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
                 btn = QtGui.QPushButton('Exit', self)
                 btn.clicked.connect(self.close_application)
                 btn.resize(50, 30)
+                btn.move(750, 0)
 
 	def open_restaurant(self, item):
 		# print item, str(item.text())
@@ -283,11 +284,19 @@ class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 		super(RestaurantWindow, self).__init__(parent)
 		QtGui.QMainWindow.__init__(self)
 		Ui_MainWindow.__init__(self)
+		btn = QtGui.QPushButton('Exit', self)
+		btn.clicked.connect(self.close_application)
+		btn.resize(50, 30)
+		btn.move(750, 0)
 		self.setupUi(self)
+
+		usr_review = self.usrReview.toPlainText()
 
 	def get_restaurant_data(self, name):
 		filename = "../Restaurants/%s" % name
 		# print "%s" %
+		self.thumbsUp.setText(u"\U0001F44D")
+		self.thumbsDown.setText(u"\U0001F44E")
 		with open(filename) as file:
 			for line in file:
 				line = re.match( r'^\s*(.+):\s+(.*)$', line, re.M|re.I)
@@ -332,6 +341,14 @@ class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 				elif label == 'Categories':
 					data_new = re.sub(',\s', '\n', data)
 					self.lbl_restTags.setText(data_new)
+				elif label == 'Comments':
+
+					data_new = re.sub(' /', '\n' + u"\u2022" + ' ', data)
+					data_new_new = re.sub('^', u"\u2022" + ' ', data_new)
+					self.comments.setText(data_new_new)
+
+	def close_application(self):
+		sys.exit()
 
 if __name__ == "__main__":
 	app = QtGui.QApplication(sys.argv)
