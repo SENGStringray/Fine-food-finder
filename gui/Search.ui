@@ -35,9 +35,9 @@
   <widget class="QLineEdit" name="bar_Search">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>490</y>
-     <width>371</width>
+     <x>210</x>
+     <y>480</y>
+     <width>391</width>
      <height>31</height>
     </rect>
    </property>
@@ -45,9 +45,9 @@
   <widget class="QPushButton" name="btn_Search">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>350</x>
      <y>550</y>
-     <width>71</width>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -58,141 +58,22 @@
   <widget class="QLabel" name="lbl_Question">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>230</x>
      <y>10</y>
-     <width>271</width>
+     <width>321</width>
      <height>61</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
    <property name="text">
     <string>Where would you like to eat today?</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="gridLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>280</y>
-     <width>191</width>
-     <height>201</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="ChoiceGrid_1">
-    <item row="4" column="0">
-     <widget class="QCheckBox" name="cb_3">
-      <property name="text">
-       <string>Indonesian</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QCheckBox" name="cb_1">
-      <property name="text">
-       <string>French</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QCheckBox" name="cb_0">
-      <property name="text">
-       <string>Chinese</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QCheckBox" name="cb_4">
-      <property name="text">
-       <string>Italian</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QCheckBox" name="cb_2">
-      <property name="text">
-       <string>Indian</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QCheckBox" name="cb_5">
-      <property name="text">
-       <string>Japanese</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="gridLayoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>70</y>
-     <width>191</width>
-     <height>201</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="ChoiceGrid_2">
-    <item row="5" column="0">
-     <widget class="QCheckBox" name="cb_11">
-      <property name="text">
-       <string>Vietnamese</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QCheckBox" name="cb_9">
-      <property name="text">
-       <string>Taiwanese</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QCheckBox" name="cb_6">
-      <property name="text">
-       <string>Korean</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QCheckBox" name="cb_8">
-      <property name="text">
-       <string>Mexican</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QCheckBox" name="cb_10">
-      <property name="text">
-       <string>Thai</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QCheckBox" name="cb_7">
-      <property name="text">
-       <string>Lebanese</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QRadioButton" name="radioButton">
-   <property name="geometry">
-    <rect>
-     <x>660</x>
-     <y>510</y>
-     <width>82</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>All</string>
-   </property>
-   <property name="autoExclusive">
-    <bool>false</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
@@ -211,9 +92,9 @@
   <widget class="QLineEdit" name="bar_Price">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>390</y>
-     <width>371</width>
+     <x>210</x>
+     <y>420</y>
+     <width>391</width>
      <height>31</height>
     </rect>
    </property>
@@ -221,8 +102,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>380</y>
+     <x>110</x>
+     <y>420</y>
      <width>61</width>
      <height>31</height>
     </rect>
@@ -244,7 +125,7 @@
     <string>Dining Party</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="S">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -254,20 +135,20 @@
     </rect>
    </property>
    <property name="text">
-    <string>style</string>
+    <string>Style</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>490</y>
-     <width>151</width>
+     <x>80</x>
+     <y>480</y>
+     <width>121</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>Restaurant Name:</string>
+    <string>SearchString:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
@@ -312,8 +193,8 @@
   <widget class="QRadioButton" name="rbtn_View_3">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>330</y>
+     <x>370</x>
+     <y>380</y>
      <width>111</width>
      <height>22</height>
     </rect>
@@ -325,8 +206,8 @@
   <widget class="QRadioButton" name="rbtn_View_4">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>330</y>
+     <x>490</x>
+     <y>380</y>
      <width>111</width>
      <height>22</height>
     </rect>
@@ -338,8 +219,8 @@
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>330</y>
+     <x>110</x>
+     <y>380</y>
      <width>68</width>
      <height>17</height>
     </rect>
@@ -351,8 +232,8 @@
   <widget class="QRadioButton" name="rbtn_View_1">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>330</y>
+     <x>210</x>
+     <y>380</y>
      <width>51</width>
      <height>22</height>
     </rect>
@@ -367,8 +248,8 @@
   <widget class="QRadioButton" name="rbtn_View_2">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>330</y>
+     <x>280</x>
+     <y>380</y>
      <width>71</width>
      <height>22</height>
     </rect>
@@ -377,12 +258,12 @@
     <string>Scenic</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="DiningParty">
    <property name="geometry">
     <rect>
      <x>210</x>
      <y>80</y>
-     <width>361</width>
+     <width>391</width>
      <height>27</height>
     </rect>
    </property>
@@ -412,12 +293,12 @@
     </property>
    </item>
   </widget>
-  <widget class="QComboBox" name="comboBox_2">
+  <widget class="QComboBox" name="Cuisine">
    <property name="geometry">
     <rect>
      <x>210</x>
      <y>130</y>
-     <width>361</width>
+     <width>391</width>
      <height>27</height>
     </rect>
    </property>
@@ -507,12 +388,12 @@
     </property>
    </item>
   </widget>
-  <widget class="QComboBox" name="comboBox_3">
+  <widget class="QComboBox" name="Style">
    <property name="geometry">
     <rect>
      <x>210</x>
      <y>180</y>
-     <width>361</width>
+     <width>391</width>
      <height>27</height>
     </rect>
    </property>
@@ -557,12 +438,12 @@
     </property>
    </item>
   </widget>
-  <widget class="QComboBox" name="comboBox_4">
+  <widget class="QComboBox" name="Dietary">
    <property name="geometry">
     <rect>
      <x>210</x>
      <y>240</y>
-     <width>361</width>
+     <width>391</width>
      <height>27</height>
     </rect>
    </property>
@@ -597,12 +478,12 @@
     </property>
    </item>
   </widget>
-  <widget class="QComboBox" name="comboBox_5">
+  <widget class="QComboBox" name="Extras">
    <property name="geometry">
     <rect>
      <x>210</x>
      <y>290</y>
-     <width>361</width>
+     <width>391</width>
      <height>27</height>
     </rect>
    </property>
@@ -665,25 +546,40 @@
   <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>87</x>
-     <y>440</y>
-     <width>71</width>
-     <height>20</height>
+     <x>100</x>
+     <y>340</y>
+     <width>68</width>
+     <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Location:</string>
+    <string>Sorted</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="bar_location">
+  <widget class="QComboBox" name="Sorted">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>440</y>
-     <width>371</width>
-     <height>31</height>
+     <x>210</x>
+     <y>340</y>
+     <width>391</width>
+     <height>27</height>
     </rect>
    </property>
+   <item>
+    <property name="text">
+     <string>Rating</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Price </string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Alphabetical</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <tabstops>
@@ -692,406 +588,6 @@
  </tabstops>
  <resources/>
  <connections>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_6</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>477</x>
-     <y>78</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>96</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_7</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>476</x>
-     <y>74</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>112</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_8</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>480</x>
-     <y>71</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>160</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_9</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>445</x>
-     <y>72</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>192</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_10</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>487</x>
-     <y>74</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>224</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_11</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>445</x>
-     <y>81</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>256</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_0</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>462</x>
-     <y>74</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>602</x>
-     <y>306</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_1</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>452</x>
-     <y>74</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>602</x>
-     <y>350</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_2</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>450</x>
-     <y>79</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>211</x>
-     <y>606</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_3</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>446</x>
-     <y>75</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>407</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_4</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>489</x>
-     <y>75</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>446</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_5</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>474</x>
-     <y>75</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>10</x>
-     <y>135</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_0</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>602</x>
-     <y>306</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_1</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>602</x>
-     <y>350</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cb_2</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>211</x>
-     <y>606</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_3</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>407</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_4</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>446</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_5</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>10</x>
-     <y>135</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_6</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>96</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_7</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>112</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_8</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>160</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_9</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>192</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_10</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>224</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_11</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>601</x>
-     <y>256</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>radioButton</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>489</x>
-     <y>69</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>660</x>
-     <y>510</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>btn_Search</sender>
    <signal>released()</signal>
@@ -1121,22 +617,6 @@
     <hint type="destinationlabel">
      <x>251</x>
      <y>403</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>radioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>cb_2</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>702</x>
-     <y>521</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>396</x>
-     <y>600</y>
     </hint>
    </hints>
   </connection>
