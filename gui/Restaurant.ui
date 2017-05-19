@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>320</height>
+    <width>800</width>
+    <height>620</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>500</width>
-    <height>316</height>
+    <width>800</width>
+    <height>620</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>500</width>
-    <height>320</height>
+    <width>800</width>
+    <height>620</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -34,7 +34,7 @@
     <rect>
      <x>10</x>
      <y>0</y>
-     <width>291</width>
+     <width>621</width>
      <height>31</height>
     </rect>
    </property>
@@ -55,7 +55,7 @@
     <rect>
      <x>60</x>
      <y>80</y>
-     <width>371</width>
+     <width>661</width>
      <height>20</height>
     </rect>
    </property>
@@ -74,8 +74,8 @@
     <rect>
      <x>180</x>
      <y>90</y>
-     <width>321</width>
-     <height>231</height>
+     <width>611</width>
+     <height>321</height>
     </rect>
    </property>
    <property name="font">
@@ -86,8 +86,8 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
+      <x>10</x>
+      <y>10</y>
       <width>161</width>
       <height>21</height>
      </rect>
@@ -95,7 +95,7 @@
     <property name="font">
      <font>
       <family>Sawasdee</family>
-      <pointsize>10</pointsize>
+      <pointsize>11</pointsize>
       <weight>75</weight>
       <italic>false</italic>
       <bold>true</bold>
@@ -109,15 +109,15 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>20</y>
-      <width>321</width>
-      <height>211</height>
+      <y>30</y>
+      <width>611</width>
+      <height>291</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Sawasdee</family>
-      <pointsize>9</pointsize>
+      <pointsize>11</pointsize>
       <italic>false</italic>
      </font>
     </property>
@@ -137,7 +137,7 @@
     <rect>
      <x>10</x>
      <y>30</y>
-     <width>371</width>
+     <width>591</width>
      <height>21</height>
     </rect>
    </property>
@@ -157,7 +157,7 @@
      <x>10</x>
      <y>50</y>
      <width>411</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="font">
@@ -179,7 +179,7 @@
      <x>0</x>
      <y>90</y>
      <width>181</width>
-     <height>231</height>
+     <height>321</height>
     </rect>
    </property>
    <property name="font">
@@ -190,8 +190,8 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
+      <x>10</x>
+      <y>10</y>
       <width>161</width>
       <height>21</height>
      </rect>
@@ -199,7 +199,7 @@
     <property name="font">
      <font>
       <family>Sawasdee</family>
-      <pointsize>10</pointsize>
+      <pointsize>11</pointsize>
       <weight>75</weight>
       <italic>false</italic>
       <bold>true</bold>
@@ -213,15 +213,15 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>20</y>
+      <y>30</y>
       <width>181</width>
-      <height>211</height>
+      <height>291</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Sawasdee</family>
-      <pointsize>9</pointsize>
+      <pointsize>11</pointsize>
       <italic>false</italic>
      </font>
     </property>
@@ -245,8 +245,8 @@
   <widget class="QLabel" name="restaurantRating">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>0</y>
+     <x>640</x>
+     <y>10</y>
      <width>141</width>
      <height>50</height>
     </rect>
@@ -261,6 +261,84 @@
     <string>Rating</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>420</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sawasdee</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Leave a review!</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>440</y>
+     <width>181</width>
+     <height>171</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>420</y>
+     <width>291</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sawasdee</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>What have other people had to say?</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="lbl_restMenu_2">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>440</y>
+     <width>611</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sawasdee</family>
+     <pointsize>11</pointsize>
+     <italic>false</italic>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::VLine</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>lbl_restName</zorder>
   <zorder>line</zorder>
   <zorder>widget_2</zorder>
@@ -268,6 +346,10 @@
   <zorder>widget</zorder>
   <zorder>restaurantRating</zorder>
   <zorder>lbl_restAddress</zorder>
+  <zorder>label</zorder>
+  <zorder>textEdit</zorder>
+  <zorder>label_2</zorder>
+  <zorder>lbl_restMenu_2</zorder>
  </widget>
  <resources/>
  <connections/>
