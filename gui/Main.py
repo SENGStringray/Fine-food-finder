@@ -224,7 +224,11 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 					if (match):
 						search_found = 1
 			if (search_found and category_found) :
-				arrOfRestaurants.append(rest_object)
+                if (priceString != "") :
+                    if (float(priceString) >= rest_object.price) :
+                        arrOfRestaurants.append(rest_object)
+                else :
+                    arrOfRestaurants.append(rest_object)
 
 			f.close
 			
