@@ -310,9 +310,18 @@ class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 		Ui_MainWindow.__init__(self)
 		self.setupUi(self)
 
+		usr_review = self.usrReview.toPlainText()
+		print(usr_review)
+		# with open('somefile.txt', 'a') as f:
+  #  			f.write(mytext)
+
 	def get_restaurant_data(self, name):
 		filename = "../Restaurants/%s" % name
 		# print "%s" %
+		with open(filename, 'a') as f:
+   			f.write(' /' + mytext)
+		self.thumbsUp.setText(u"\U0001F44D")
+		self.thumbsDown.setText(u"\U0001F44E")
 		with open(filename) as file:
 			for line in file:
 				line = re.match( r'^\s*(.+):\s+(.*)$', line, re.M|re.I)
