@@ -52,13 +52,19 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.bar_Price.textChanged.connect(self.handlePriceTextChanged)
 		self.searchString = ""
 		self.priceString = ""
-		self.checkBoxString = ""
+		#self.checkBoxString = ""
+		self.SortedString = "Rating"
+		self.ExtraString = "Any"
+		self.DietaryString = "Any"
+		self.StyleString = "Any"
+		self.CuisineString = "Any"
+		self.DiningPartyString = "Any"
 		self.viewString = "Any" #Default is 'Any'
 
 		btn = QtGui.QPushButton('Exit', self)
 		btn.clicked.connect(self.close_application)
 		btn.resize(50, 30)
-		btn.move(750, 0)
+
 
 
 
@@ -83,13 +89,21 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.rbtn_View_3.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_3))
 		self.rbtn_View_4.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_4))
 
+		self.Sorted.currentIndexChanged.connect(self.sortedchange)
+		self.Extras.currentIndexChanged.connect(self.Extraschange)
+		self.Dietary.currentIndexChanged.connect(self.Dietarychange)
+		self.Style.currentIndexChanged.connect(self.Stylechange)
+		self.Cuisine.currentIndexChanged.connect(self.Cuisinechange)
+		self.DiningParty.currentIndexChanged.connect(self.DiningPartychange)
+
+
 		#Ensure only numbers are passed into the price box
 		regexp = QtCore.QRegExp('^0|[1-9][0-9]{2}$')
 		validator = QtGui.QRegExpValidator(regexp)
 		self.bar_Price.setValidator(validator)
 
-		# mainMenu = self.menuBar()
-		# fileMenu = mainMenu.addMenu('&File')
+		mainMenu = self.menuBar()
+		fileMenu = mainMenu.addMenu('&File')
 		#fileMenu.addAction(extractAction)
 
 	def handleSearchButton(self):
@@ -119,23 +133,39 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 	def rbtnState_changed(self, button):
 		self.viewString = button.text()
 
-	def cbstate_changed(self, button):
-		if (button.isChecked()):
-			if self.checkBoxString == "":
-				self.checkBoxString = button.text()
-			else:
-				self.checkBoxString = self.checkBoxString + " " + button.text()
-		else:
-			if (self.checkBoxString == ""):
-				self.checkBoxString = self.checkBoxString.replace(button.text(), "")
-			elif (self.checkBoxString == button.text()):
-				  self.checkBoxString = ""
-			else:
-				self.checkBoxString = self.checkBoxString.replace(button.text() + " ", "")
-				self.checkBoxString = self.checkBoxString.replace(" " + button.text(), "")
+	def sortedchange(self,i):
+      		#print "Items in the list are :"
+      		#for count in range(self.Sorted.count()):
+         	#	print self.Sorted.itemText(count)
+      		#print "Current index",i,"selection changed ",self.Sorted.currentText()
+		self.SortedString = self.Sorted.currentText()
+		print self.SortedString
+
+
+	def Extraschange(self,i):
+		self.ExtraString = self.Extras.currentText()
+		print self.ExtraString
+
+	def Dietarychange(self,i):
+		self.DietaryString = self.Dietary.currentText()
+		print self.DietaryString
+	
+	def Stylechange(self,i):
+		self.StyleString = self.Style.currentText()
+		print self.StyleString
+
+	def Cuisinechange(self,i):
+		self.CuisineString = self.Cuisine.currentText()
+		print self.CuisineString
+	def DiningPartychange(self,i):
+		self.DiningPartyString = self.DiningParty.currentText()
+		print self.DiningPartyString
+
+
+
 
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
-	def __init__(self, checkBoxStr, searchStr, priceStr, viewStr, parent=None):
+	def __init__(self, SortedString, ExtraString, DietaryString, StyleString, CuisineString, DiningPartyString, checkBoxStr, searchStr, priceStr, viewStr, parent=None):
 
 
 
@@ -162,7 +192,6 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
                 btn = QtGui.QPushButton('Exit', self)
                 btn.clicked.connect(self.close_application)
                 btn.resize(50, 30)
-                btn.move(750, 0)
 
 	def open_restaurant(self, item):
 		# print item, str(item.text())
@@ -224,13 +253,8 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 					match = re.search(searchString, content, re.I)
 					if (match):
 						search_found = 1
-        
 			if (search_found and category_found) :
-                		if (priceString != "") :
-                    			if (float(priceString) >= rest_object.price) :
-                        			arrOfRestaurants.append(rest_object)
-                		else :
-                    			arrOfRestaurants.append(rest_object)
+				arrOfRestaurants.append(rest_object)
 
 			f.close
 			
@@ -284,19 +308,11 @@ class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 		super(RestaurantWindow, self).__init__(parent)
 		QtGui.QMainWindow.__init__(self)
 		Ui_MainWindow.__init__(self)
-		btn = QtGui.QPushButton('Exit', self)
-		btn.clicked.connect(self.close_application)
-		btn.resize(50, 30)
-		btn.move(750, 0)
 		self.setupUi(self)
-
-		usr_review = self.usrReview.toPlainText()
 
 	def get_restaurant_data(self, name):
 		filename = "../Restaurants/%s" % name
 		# print "%s" %
-		self.thumbsUp.setText(u"\U0001F44D")
-		self.thumbsDown.setText(u"\U0001F44E")
 		with open(filename) as file:
 			for line in file:
 				line = re.match( r'^\s*(.+):\s+(.*)$', line, re.M|re.I)
@@ -341,14 +357,6 @@ class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 				elif label == 'Categories':
 					data_new = re.sub(',\s', '\n', data)
 					self.lbl_restTags.setText(data_new)
-				elif label == 'Comments':
-
-					data_new = re.sub(' /', '\n' + u"\u2022" + ' ', data)
-					data_new_new = re.sub('^', u"\u2022" + ' ', data_new)
-					self.comments.setText(data_new_new)
-
-	def close_application(self):
-		sys.exit()
 
 if __name__ == "__main__":
 	app = QtGui.QApplication(sys.argv)
