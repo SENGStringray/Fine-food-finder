@@ -190,7 +190,7 @@
     <string>Extras</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="rbtn_View_3">
+  <widget class="QRadioButton" name="ViewWaterFront">
    <property name="geometry">
     <rect>
      <x>370</x>
@@ -203,7 +203,7 @@
     <string>Water Front</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="rbtn_View_4">
+  <widget class="QRadioButton" name="ViewBeachFront">
    <property name="geometry">
     <rect>
      <x>490</x>
@@ -229,7 +229,7 @@
     <string>View</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="rbtn_View_1">
+  <widget class="QRadioButton" name="ViewAny">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -245,7 +245,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QRadioButton" name="rbtn_View_2">
+  <widget class="QRadioButton" name="ViewScenic">
    <property name="geometry">
     <rect>
      <x>280</x>
