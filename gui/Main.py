@@ -5,6 +5,8 @@ import glob
 from operator import itemgetter, attrgetter, methodcaller
 from PyQt4 import QtCore, QtGui, uic
 from PyQt4.QtCore import pyqtSlot, SIGNAL, SLOT
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
 
 Ui_MainWindow, QtBaseClass = uic.loadUiType("Search.ui")
 Ui_MainWindow1, QtBaseClass1 = uic.loadUiType("Result.ui")
@@ -57,18 +59,24 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		btn.clicked.connect(self.close_application)
 		btn.resize(50, 30)
 
-		self.cb_0.stateChanged.connect(lambda:self.cbstate_changed(self.cb_0))
-		self.cb_1.stateChanged.connect(lambda:self.cbstate_changed(self.cb_1))
-		self.cb_2.stateChanged.connect(lambda:self.cbstate_changed(self.cb_2))
-		self.cb_3.stateChanged.connect(lambda:self.cbstate_changed(self.cb_3))
-		self.cb_4.stateChanged.connect(lambda:self.cbstate_changed(self.cb_4))
-		self.cb_5.stateChanged.connect(lambda:self.cbstate_changed(self.cb_5))
-		self.cb_6.stateChanged.connect(lambda:self.cbstate_changed(self.cb_6))
-		self.cb_7.stateChanged.connect(lambda:self.cbstate_changed(self.cb_7))
-		self.cb_8.stateChanged.connect(lambda:self.cbstate_changed(self.cb_8))
-		self.cb_9.stateChanged.connect(lambda:self.cbstate_changed(self.cb_9))
-		self.cb_10.stateChanged.connect(lambda:self.cbstate_changed(self.cb_10))
-		self.cb_11.stateChanged.connect(lambda:self.cbstate_changed(self.cb_11))
+
+
+
+
+
+                
+		#self.cb_0.stateChanged.connect(lambda:self.cbstate_changed(self.cb_0))
+		#self.cb_1.stateChanged.connect(lambda:self.cbstate_changed(self.cb_1))
+		#self.cb_2.stateChanged.connect(lambda:self.cbstate_changed(self.cb_2))
+		#self.cb_3.stateChanged.connect(lambda:self.cbstate_changed(self.cb_3))
+		#self.cb_4.stateChanged.connect(lambda:self.cbstate_changed(self.cb_4))
+		#self.cb_5.stateChanged.connect(lambda:self.cbstate_changed(self.cb_5))
+		#self.cb_6.stateChanged.connect(lambda:self.cbstate_changed(self.cb_6))
+		#self.cb_7.stateChanged.connect(lambda:self.cbstate_changed(self.cb_7))
+		#self.cb_8.stateChanged.connect(lambda:self.cbstate_changed(self.cb_8))
+		#self.cb_9.stateChanged.connect(lambda:self.cbstate_changed(self.cb_9))
+		#self.cb_10.stateChanged.connect(lambda:self.cbstate_changed(self.cb_10))
+		#self.cb_11.stateChanged.connect(lambda:self.cbstate_changed(self.cb_11))
 
 		self.rbtn_View_1.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_1))
 		self.rbtn_View_2.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_2))
