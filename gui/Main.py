@@ -228,8 +228,8 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
                 		if (priceString != "") :
                     			if (float(priceString) >= rest_object.price) :
                         			arrOfRestaurants.append(rest_object)
-                	else :
-                    		arrOfRestaurants.append(rest_object)
+                		else :
+                    			arrOfRestaurants.append(rest_object)
 
 			f.close
 			
