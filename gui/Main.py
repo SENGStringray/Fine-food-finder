@@ -108,7 +108,7 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 
 	def handleSearchButton(self):
 		#print "Text typed: ", self.searchString
-		window.NewSearch = ResultWindow(self.checkBoxString, self.searchString, self.priceString, self.viewString, self)
+		window.NewSearch = ResultWindow(self.SortedString, self.ExtraString, self.DietaryString, self.StyleString, self.CuisineString, self.DiningPartyString, self.searchString, self.priceString, self.viewString, self)
 		self.searchString = ""
 		window.NewSearch.show()
 
@@ -165,7 +165,7 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 
 
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
-	def __init__(self, SortedString, ExtraString, DietaryString, StyleString, CuisineString, DiningPartyString, checkBoxStr, searchStr, priceStr, viewStr, parent=None):
+	def __init__(self, SortedString, ExtraString, DietaryString, StyleString, CuisineString, DiningPartyString, searchStr, priceStr, viewString, parent=None):
 
 
 
