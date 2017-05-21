@@ -84,10 +84,10 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		#self.cb_10.stateChanged.connect(lambda:self.cbstate_changed(self.cb_10))
 		#self.cb_11.stateChanged.connect(lambda:self.cbstate_changed(self.cb_11))
 
-		self.rbtn_View_1.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_1))
-		self.rbtn_View_2.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_2))
-		self.rbtn_View_3.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_3))
-		self.rbtn_View_4.toggled.connect(lambda:self.rbtnState_changed(self.rbtn_View_4))
+		self.ViewAny.toggled.connect(lambda:self.rbtnState_changed(self.ViewAny))
+		self.ViewScenic.toggled.connect(lambda:self.rbtnState_changed(self.ViewScenic))
+		self.ViewWaterFront.toggled.connect(lambda:self.rbtnState_changed(self.ViewWaterFront))
+		self.ViewBeachFront.toggled.connect(lambda:self.rbtnState_changed(self.ViewBeachFront))
 
 		self.Sorted.currentIndexChanged.connect(self.sortedchange)
 		self.Extras.currentIndexChanged.connect(self.Extraschange)
@@ -107,13 +107,14 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		#fileMenu.addAction(extractAction)
 
 
-		checkBoxStr = self.ExtraString + " " + self.DietaryString + " " + self.StyleString + " " + self.CuisineString + " " + self.DiningPartyString + " " + self.viewString;
+		#checkBoxStr = self.ExtraString + " " + self.DietaryString + " " + self.StyleString + " " + self.CuisineString + " " + self.DiningPartyString + " " + self.viewString;
 
 
 
 
 	def handleSearchButton(self):
 		#print "Text typed: ", self.searchString
+		self.checkBoxStr = self.ExtraString + " " + self.DietaryString + " " + self.StyleString + " " + self.CuisineString + " " + self.DiningPartyString + " " + self.viewString;
 		window.NewSearch = ResultWindow(self.checkBoxStr, self.SortedString, self.searchString, self.priceString, self)
 		self.searchString = ""
 		window.NewSearch.show()
@@ -145,30 +146,28 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
          	#	print self.Sorted.itemText(count)
       		#print "Current index",i,"selection changed ",self.Sorted.currentText()
 		self.SortedString = self.Sorted.currentText()
-		print self.SortedString
+		print (self.SortedString)
 
 
 	def Extraschange(self,i):
 		self.ExtraString = self.Extras.currentText()
-		print self.ExtraString
+		print (self.ExtraString)
 
 	def Dietarychange(self,i):
 		self.DietaryString = self.Dietary.currentText()
-		print self.DietaryString
+		print (self.DietaryString)
 	
 	def Stylechange(self,i):
 		self.StyleString = self.Style.currentText()
-		print self.StyleString
+		print (self.StyleString)
 
 	def Cuisinechange(self,i):
 		self.CuisineString = self.Cuisine.currentText()
-		print self.CuisineString
+		print (self.CuisineString)
 	def DiningPartychange(self,i):
 		self.DiningPartyString = self.DiningParty.currentText()
-		print self.DiningPartyString
+		print (self.DiningPartyString)
 
-
-	
 
 
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
@@ -181,16 +180,18 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		#self.searchString = searchStr
 		#self.priceString = priceStr
 		#self.viewString = viewStr
-		checkBoxStr = re.sub(r'\b(\w+)( \1\b)+', r'\1', checkBoxStr) #Removes repeated words
+		#checkBoxStr = re.sub(r'\b(\w+)( \1\b)+', r'\1', checkBoxStr) #Removes repeated words
 		#print self.searchString
 		#print "String to search: ", self.searchString
 		super(ResultWindow, self).__init__(parent)
 		self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 		self.setupUi(self)
-		self.find_matching_restaurants(searchStr, checkBoxStr, priceStr, viewStr)
+		self.find_matching_restaurants(searchStr, checkBoxStr, priceStr) #, viewStr)
 		# self.resultsList.currentItemChanged.connect(self.handleRestaurantButton(self.resultsList.current().widget.textUpQLabel))
 		# self.resultsList.itemDoubleClicked.connect(self.handleRestaurantButton(self.resultsList.currentItem().text()))
 		self.resultsList.itemDoubleClicked.connect(self.open_restaurant)
+		print ("checkBoxStr: " + checkBoxStr)
+
 		# self.lbl_SearchResult.setText("%s" % searchStr)
 		# self.lbl_CheckboxResult.setText("%s" % checkBoxStr)
 		# self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
@@ -200,16 +201,17 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
                 btn.clicked.connect(self.close_application)
                 btn.resize(50, 30)
 
+
 	def open_restaurant(self, item):
 		# print item, str(item.text())
 		self.handleRestaurantButton(re.sub(' ', '-',str(item.text())))
 
 
-	def find_matching_restaurants(self, searchString, checkboxString, priceString, viewString):
+	def find_matching_restaurants(self, searchString, checkboxString, priceString):#, viewString):
 		print ("searchBox: " + searchString)
 		print ("price: " + priceString)
 		print ("checkBoxes: " + checkboxString)
-		print ("view: " + viewString)
+		#print ("view: " + viewString)
 		sort_option = ""
 		
 		path = "../Restaurants/*"
