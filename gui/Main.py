@@ -52,7 +52,7 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.bar_Price.textChanged.connect(self.handlePriceTextChanged)
 		self.searchString = ""
 		self.priceString = ""
-		#self.checkBoxString = ""
+		self.checkBoxStr = ""
 		self.SortedString = "Rating"
 		self.ExtraString = "Any"
 		self.DietaryString = "Any"
@@ -106,9 +106,15 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		fileMenu = mainMenu.addMenu('&File')
 		#fileMenu.addAction(extractAction)
 
+
+		checkBoxStr = self.ExtraString + " " + self.DietaryString + " " + self.StyleString + " " + self.CuisineString + " " + self.DiningPartyString + " " + self.viewString;
+
+
+
+
 	def handleSearchButton(self):
 		#print "Text typed: ", self.searchString
-		window.NewSearch = ResultWindow(self.SortedString, self.ExtraString, self.DietaryString, self.StyleString, self.CuisineString, self.DiningPartyString, self.searchString, self.priceString, self.viewString, self)
+		window.NewSearch = ResultWindow(self.checkBoxStr, self.SortedString, self.searchString, self.priceString, self)
 		self.searchString = ""
 		window.NewSearch.show()
 
@@ -162,10 +168,11 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		print self.DiningPartyString
 
 
+	
 
 
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
-	def __init__(self, SortedString, ExtraString, DietaryString, StyleString, CuisineString, DiningPartyString, searchStr, priceStr, viewString, parent=None):
+	def __init__(self, checkBoxStr, SortedString, searchStr, priceStr, parent=None):
 
 
 
@@ -371,4 +378,4 @@ if __name__ == "__main__":
 	app = QtGui.QApplication(sys.argv)
 	window = SearchWindow()
 	window.show()
-	sys.exit(app.exec_())
+sys.exit(app.exec_())
