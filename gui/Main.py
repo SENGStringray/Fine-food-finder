@@ -191,18 +191,18 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		# self.resultsList.itemDoubleClicked.connect(self.handleRestaurantButton(self.resultsList.currentItem().text()))
 		self.resultsList.itemDoubleClicked.connect(self.open_restaurant)
 		print ("checkBoxStr: " + checkBoxStr)
-		btn = QtGui.QPushButton('Exit', self)
-		btn.clicked.connect(self.close_application)
-		btn.resize(50, 30)
+		#btn = QtGui.QPushButton('Exit', self)
+		#btn.clicked.connect(self.close_application)
+		#btn.resize(50, 30)
 
 		# self.lbl_SearchResult.setText("%s" % searchStr)
 		# self.lbl_CheckboxResult.setText("%s" % checkBoxStr)
 		# self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
 		# self.btn_restaurant2.clicked.connect(self.handleRestaurantButton('Black-Birch'))
 		# self.btn_restaurant3.clicked.connect(self.handleRestaurantButton)
-                #btn = QtGui.QPushButton('Exit', self)
-                #btn.clicked.connect(self.close_application)
-                #btn.resize(50, 30)
+                btn = QtGui.QPushButton('Exit', self)
+                btn.clicked.connect(self.close_application)
+                btn.resize(50, 30)
 
 
 	def open_restaurant(self, item):
