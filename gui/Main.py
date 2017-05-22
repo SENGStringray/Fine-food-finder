@@ -212,9 +212,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		print ("price: " + priceString)
 		print ("checkBoxes: " + checkboxString)
 		#print ("view: " + viewString)
-		max_price = 1000
-		if priceString != "" :
-			max_price = float(priceString)
+
 		sort_option = "" # make sure you initialise it to the sortOption given
 		path = "../Restaurants/*"
 		searchString = searchString.rstrip()
@@ -266,7 +264,10 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 					if (match):
 						search_found = 1
 			if (search_found and category_found) :
-				arrOfRestaurants.append(rest_object)
+				if (priceString != "" and rest_object.price <= float(priceString)):
+					arrOfRestaurants.append(rest_object)
+				elif (priceString == "") :
+					arrOfRestaurants.append(rest_object)
 
 			f.close
 			
