@@ -212,13 +212,16 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		print ("price: " + priceString)
 		print ("checkBoxes: " + checkboxString)
 		#print ("view: " + viewString)
-		sort_option = ""
-		
+		max_price = 1000
+		if priceString != "" :
+			max_price = float(priceString)
+		sort_option = "" # make sure you initialise it to the sortOption given
 		path = "../Restaurants/*"
 		searchString = searchString.rstrip()
 		checkboxString = checkboxString.rstrip()
 		arrayOfSelectedCat = checkboxString.split() # spilt the checkboxString
-
+		
+		
 		arrOfRestaurants = []
 		for fileN in glob.glob(path):
 			f  = open(fileN, 'r')
