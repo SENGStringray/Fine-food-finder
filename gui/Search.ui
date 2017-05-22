@@ -109,7 +109,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Price:</string>
+    <string>Price</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -148,7 +148,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>SearchString:</string>
+    <string>Restaurant Name</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
@@ -601,6 +601,22 @@
   <connection>
    <sender>btn_Search</sender>
    <signal>released()</signal>
+   <receiver>bar_Price</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>527</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>251</x>
+     <y>403</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_Search</sender>
+   <signal>released()</signal>
    <receiver>bar_Search</receiver>
    <slot>undo()</slot>
    <hints>
@@ -617,16 +633,16 @@
   <connection>
    <sender>btn_Search</sender>
    <signal>released()</signal>
-   <receiver>bar_Price</receiver>
+   <receiver>bar_Search</receiver>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>369</x>
-     <y>527</y>
+     <x>424</x>
+     <y>565</y>
     </hint>
     <hint type="destinationlabel">
-     <x>251</x>
-     <y>403</y>
+     <x>522</x>
+     <y>500</y>
     </hint>
    </hints>
   </connection>

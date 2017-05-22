@@ -42,7 +42,7 @@ class Ui_Form(object):
         self.resultsList.setResizeMode(QtGui.QListView.Adjust)
         self.resultsList.setObjectName(_fromUtf8("resultsList"))
         self.label = QtGui.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(260, 40, 271, 41))
+        self.label.setGeometry(QtCore.QRect(260, 40, 311, 41))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Sawasdee"))
         font.setPointSize(11)
@@ -57,4 +57,14 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         Form.setWindowTitle(_translate("Form", "FoodFinder", None))
         self.label.setText(_translate("Form", "Here is a list of restaurants just for you", None))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    Form = QtGui.QWidget()
+    ui = Ui_Form()
+    ui.setupUi(Form)
+    Form.show()
+    sys.exit(app.exec_())
 
