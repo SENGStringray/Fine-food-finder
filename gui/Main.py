@@ -217,13 +217,11 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		print ("sort by: " + sortedString)
 		#print ("view: " + viewString)
 		
-		searchString = string(searchString)
-		checkboxString = string(checkboxString)
-		priceString = string(priceString)
+		searchString = str(searchString)
+		checkboxString = str(checkboxString)
+		priceString = str(priceString)
+		sort_option = str(sortedString)
 		
-		
-		
-		sort_option = "" # make sure you initialise it to the sortOption given
 		path = "../Restaurants/*"
 		searchString = searchString.rstrip()
 		checkboxString = checkboxString.rstrip()
@@ -280,6 +278,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 					arrOfRestaurants.append(rest_object)
 
 			f.close
+
 			
 		sortedList = []
 		if (sort_option == "price") :
