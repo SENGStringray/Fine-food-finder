@@ -25,6 +25,11 @@
     <height>620</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>Sawasdee</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>FoodFinder</string>
   </property>
@@ -32,24 +37,30 @@
    <iconset>
     <normaloff>Icon.png</normaloff>Icon.png</iconset>
   </property>
-  <widget class="QLineEdit" name="bar_Search">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>480</y>
-     <width>391</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image=url('bg-1.jpg')</string>
+  </property>
   <widget class="QPushButton" name="btn_Search">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>550</y>
-     <width>101</width>
+     <x>710</x>
+     <y>570</y>
+     <width>71</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Serif Armenian</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Search</string>
@@ -58,593 +69,748 @@
   <widget class="QLabel" name="lbl_Question">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>10</y>
-     <width>321</width>
+     <x>150</x>
+     <y>30</y>
+     <width>511</width>
      <height>61</height>
     </rect>
    </property>
    <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
+    <font/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;text-transform:uppercase;</string>
+   </property>
    <property name="text">
-    <string>Where would you like to eat today?</string>
+    <string>W h e r e   w o u l d   y o u   l i k e   t o   e a t   t o d a y ?</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>41</width>
-     <height>21</height>
+     <x>10</x>
+     <y>120</y>
+     <width>151</width>
+     <height>421</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Exit</string>
+   <property name="font">
+    <font>
+     <family>Noto Serif Armenian</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;text-transform:uppercase;</string>
+      </property>
+      <property name="text">
+       <string>Dining Party</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_5">
+      <property name="font">
+       <font/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;text-transform:uppercase;</string>
+      </property>
+      <property name="text">
+       <string>Cuisine</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="S">
+      <property name="font">
+       <font/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;text-transform:uppercase;</string>
+      </property>
+      <property name="text">
+       <string>Style</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_6">
+      <property name="font">
+       <font/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;text-transform:uppercase;</string>
+      </property>
+      <property name="text">
+       <string>Dietary</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_7">
+      <property name="font">
+       <font/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;text-transform:uppercase;</string>
+      </property>
+      <property name="text">
+       <string>Extras</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_9">
+      <property name="font">
+       <font/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;text-transform:uppercase;</string>
+      </property>
+      <property name="text">
+       <string>Sorted</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_8">
+      <property name="font">
+       <font/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;text-transform:uppercase;</string>
+      </property>
+      <property name="text">
+       <string>View</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;text-transform:uppercase;</string>
+      </property>
+      <property name="text">
+       <string>Price</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="font">
+       <font/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;text-transform:uppercase;</string>
+      </property>
+      <property name="text">
+       <string>Restaurant Name</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QLineEdit" name="bar_Price">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>420</y>
-     <width>391</width>
+     <x>170</x>
+     <y>110</y>
+     <width>531</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sawasdee</family>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QComboBox" name="DiningParty">
+      <property name="font">
+       <font>
+        <family>Sawasdee</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <item>
+       <property name="text">
+        <string>Any</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Solo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Couple</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Large-Group</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pet-Friendly</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Take-away</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Child-Friendly</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="Cuisine">
+      <property name="font">
+       <font>
+        <family>Sawasdee</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <item>
+       <property name="text">
+        <string>Any</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cafe</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Chinese</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Burgers</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>American</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fusion</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dessert</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pizza</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Italian</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lebanese</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Barbeque</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Japanese</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Indian</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Seafood</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Indonesian</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Finger-Food</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Breakfast</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="Style">
+      <property name="font">
+       <font>
+        <family>Sawasdee</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <item>
+       <property name="text">
+        <string>Any</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Casual-Dining</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cozy</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Modern</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fine-dining</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fast-food</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Authentic</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Street Style</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="Dietary">
+      <property name="font">
+       <font>
+        <family>Sawasdee</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <item>
+       <property name="text">
+        <string>Any</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vegetarian-Friendly</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vegan-Friendly</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Halal</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gluten-Free</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vegetarian</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="Extras">
+      <property name="font">
+       <font>
+        <family>Sawasdee</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <item>
+       <property name="text">
+        <string>Any</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wheelchair-Accessible</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bookings-Accepted</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bar</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>BYO</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cash-Only</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Smoking-Area</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Functions</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Outdoor-Area</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Beer-Garden</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Home-Delivery</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="Sorted">
+      <property name="font">
+       <font>
+        <family>Sawasdee</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <item>
+       <property name="text">
+        <string>Rating</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Price </string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Alphabetical</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>440</y>
+     <width>531</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QLineEdit" name="bar_Price">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="bar_Search">
+      <property name="font">
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="view" native="true">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>410</y>
+     <width>511</width>
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Noto Serif Armenian</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:white;</string>
+   </property>
+   <widget class="QRadioButton" name="ViewAny">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>119</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sawasdee</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Any</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="ViewWaterFront">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>9</y>
+      <width>119</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sawasdee</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Water Front</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="ViewScenic">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>9</y>
+      <width>118</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sawasdee</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Scenic</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="ViewBeachFront">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>9</y>
+      <width>119</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sawasdee</family>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Beach Front</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QPushButton" name="btn">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>420</y>
+     <x>730</x>
+     <y>10</y>
      <width>61</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Price</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>67</x>
-     <y>80</y>
-     <width>111</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Dining Party</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="S">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>180</y>
-     <width>51</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Style</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>480</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Restaurant Name</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>130</y>
-     <width>68</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Cuisine</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>240</y>
-     <width>68</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Dietary</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>290</y>
-     <width>68</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Extras</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="ViewWaterFront">
-   <property name="geometry">
-    <rect>
-     <x>370</x>
-     <y>380</y>
-     <width>111</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Water Front</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="ViewBeachFront">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>380</y>
-     <width>111</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Beach Front</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_8">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>380</y>
-     <width>68</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>View</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="ViewAny">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>380</y>
-     <width>51</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Any</string>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="ViewScenic">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>380</y>
-     <width>71</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Scenic</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="DiningParty">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>80</y>
-     <width>391</width>
      <height>27</height>
     </rect>
    </property>
-   <item>
-    <property name="text">
-     <string>Any</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Solo</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Couple</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Large-Group</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Pet-Friendly</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Take-away</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Child-Friendly</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QComboBox" name="Cuisine">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>130</y>
-     <width>391</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>Any</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Cafe</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Chinese</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Burgers</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>American</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Fusion</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Dessert</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Pizza</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Italian</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Lebanese</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Barbeque</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Japanese</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Indian</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Seafood</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Indonesian</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Finger-Food</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Breakfast</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QComboBox" name="Style">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>180</y>
-     <width>391</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>Any</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Casual-Dining</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Cozy</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Modern</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Fine-dining</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Fast-food</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Authentic</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Street Style</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QComboBox" name="Dietary">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>240</y>
-     <width>391</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>Any</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Vegetarian-Friendly</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Vegan-Friendly</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Halal</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Gluten-Free</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Vegetarian</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QComboBox" name="Extras">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>290</y>
-     <width>391</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>Any</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Wheelchair-Accessible</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Bookings-Accepted</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Bar</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>BYO</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Cash-Only</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Smoking-Area</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Functions</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Outdoor-Area</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Beer-Garden</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Home-Delivery</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QLabel" name="label_9">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>340</y>
-     <width>68</width>
-     <height>17</height>
-    </rect>
+   <property name="font">
+    <font>
+     <family>Noto Serif Armenian</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
-    <string>Sorted</string>
+    <string>Close All</string>
    </property>
-  </widget>
-  <widget class="QComboBox" name="Sorted">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>340</y>
-     <width>391</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>Rating</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Price </string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Alphabetical</string>
-    </property>
-   </item>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>bar_Search</tabstop>
   <tabstop>btn_Search</tabstop>
  </tabstops>
  <resources/>
- <connections>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>released()</signal>
-   <receiver>bar_Price</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>369</x>
-     <y>527</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>251</x>
-     <y>403</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>released()</signal>
-   <receiver>bar_Search</receiver>
-   <slot>undo()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>429</x>
-     <y>60</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>350</x>
-     <y>60</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_Search</sender>
-   <signal>released()</signal>
-   <receiver>bar_Search</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>424</x>
-     <y>565</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>522</x>
-     <y>500</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

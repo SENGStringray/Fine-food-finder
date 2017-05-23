@@ -47,6 +47,8 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		QtGui.QMainWindow.__init__(self)
 		Ui_MainWindow.__init__(self)
 		self.setupUi(self)
+		self.setStyleSheet("QWidget#Form {background-image: url(bg-1.jpg);border-image:url(bg-1.jpg);background-repeat:no-repeat;}")
+		self.view.setStyleSheet("background-color: white; border-radius:4px;")
 		self.btn_Search.clicked.connect(self.handleSearchButton)
 		self.bar_Search.textChanged.connect(self.handleSearchTextChanged)
 		self.bar_Price.textChanged.connect(self.handlePriceTextChanged)
@@ -60,29 +62,7 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.CuisineString = "Any"
 		self.DiningPartyString = "Any"
 		self.viewString = "Any" #Default is 'Any'
-
-		btn = QtGui.QPushButton('Exit', self)
-		btn.clicked.connect(self.close_application)
-		btn.resize(50, 30)
-
-
-
-
-
-
-                
-		#self.cb_0.stateChanged.connect(lambda:self.cbstate_changed(self.cb_0))
-		#self.cb_1.stateChanged.connect(lambda:self.cbstate_changed(self.cb_1))
-		#self.cb_2.stateChanged.connect(lambda:self.cbstate_changed(self.cb_2))
-		#self.cb_3.stateChanged.connect(lambda:self.cbstate_changed(self.cb_3))
-		#self.cb_4.stateChanged.connect(lambda:self.cbstate_changed(self.cb_4))
-		#self.cb_5.stateChanged.connect(lambda:self.cbstate_changed(self.cb_5))
-		#self.cb_6.stateChanged.connect(lambda:self.cbstate_changed(self.cb_6))
-		#self.cb_7.stateChanged.connect(lambda:self.cbstate_changed(self.cb_7))
-		#self.cb_8.stateChanged.connect(lambda:self.cbstate_changed(self.cb_8))
-		#self.cb_9.stateChanged.connect(lambda:self.cbstate_changed(self.cb_9))
-		#self.cb_10.stateChanged.connect(lambda:self.cbstate_changed(self.cb_10))
-		#self.cb_11.stateChanged.connect(lambda:self.cbstate_changed(self.cb_11))
+  		self.btn.clicked.connect(self.close_application)
 
 		self.ViewAny.toggled.connect(lambda:self.rbtnState_changed(self.ViewAny))
 		self.ViewScenic.toggled.connect(lambda:self.rbtnState_changed(self.ViewScenic))
@@ -101,16 +81,6 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		regexp = QtCore.QRegExp('^0|[1-9][0-9]{2}$')
 		validator = QtGui.QRegExpValidator(regexp)
 		self.bar_Price.setValidator(validator)
-
-		mainMenu = self.menuBar()
-		fileMenu = mainMenu.addMenu('&File')
-		#fileMenu.addAction(extractAction)
-
-
-		#checkBoxStr = self.ExtraString + " " + self.DietaryString + " " + self.StyleString + " " + self.CuisineString + " " + self.DiningPartyString + " " + self.viewString;
-
-
-
 
 	def handleSearchButton(self):
 		#print "Text typed: ", self.searchString
@@ -134,7 +104,6 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.show()
 
 	def close_application(self):
-		#print("Whooaaaa so custome!!!")
 		sys.exit()
 
 	def rbtnState_changed(self, button):
@@ -172,38 +141,14 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 	def __init__(self, checkBoxStr, SortedString, searchStr, priceStr, parent=None):
-
-
-
-
-                #print "Constructing Result window"
-		#self.searchString = searchStr
-		#self.priceString = priceStr
-		#self.viewString = viewStr
-		#checkBoxStr = re.sub(r'\b(\w+)( \1\b)+', r'\1', checkBoxStr) #Removes repeated words
-		#print self.searchString
-		#print "String to search: ", self.searchString
 		super(ResultWindow, self).__init__(parent)
 		self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 		self.setupUi(self)
 		self.find_matching_restaurants(searchStr, checkBoxStr, SortedString, priceStr) #, viewStr)
-		# self.resultsList.currentItemChanged.connect(self.handleRestaurantButton(self.resultsList.current().widget.textUpQLabel))
-		# self.resultsList.itemDoubleClicked.connect(self.handleRestaurantButton(self.resultsList.currentItem().text()))
 		self.resultsList.itemDoubleClicked.connect(self.open_restaurant)
 		print ("checkBoxStr: " + checkBoxStr)
-		#btn = QtGui.QPushButton('Exit', self)
-		#btn.clicked.connect(self.close_application)
-		#btn.resize(50, 30)
 
-		# self.lbl_SearchResult.setText("%s" % searchStr)
-		# self.lbl_CheckboxResult.setText("%s" % checkBoxStr)
-		# self.btn_restaurant1.clicked.connect(self.handleRestaurantButton)
-		# self.btn_restaurant2.clicked.connect(self.handleRestaurantButton('Black-Birch'))
-		# self.btn_restaurant3.clicked.connect(self.handleRestaurantButton)
-                btn = QtGui.QPushButton('Exit', self)
-                btn.clicked.connect(self.close_application)
-                btn.resize(50, 30)
-
+  		self.btn.clicked.connect(self.close_application)
 
 	def open_restaurant(self, item):
 		# print item, str(item.text())
@@ -328,22 +273,29 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 	def __init__(self, parent=None):
 		super(RestaurantWindow, self).__init__(parent)
+		self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 		QtGui.QMainWindow.__init__(self)
 		Ui_MainWindow.__init__(self)
 		self.setupUi(self)
+		self.setStyleSheet("QWidget#Form {background-image: url(bg-2.jpg);border-image:url(bg-1.jpg);background-repeat:no-repeat;}")
 
 		usr_review = self.usrReview.toPlainText()
 		print(usr_review)
 		# with open('somefile.txt', 'a') as f:
   #  			f.write(mytext)
+  		self.btn.clicked.connect(self.close_application)
+  		# btn = QtGui.QPushButton('Exit', self)
+    #     btn.clicked.connect(self.close_application)
+    #     btn.resize(50, 30)
+    #     btn.move(500,20)
 
 	def get_restaurant_data(self, name):
 		filename = "../Restaurants/%s" % name
-		# print "%s" %
-		with open(filename, 'a') as f:
-   			f.write(' /' + mytext)
-		self.thumbsUp.setText(u"\U0001F44D")
-		self.thumbsDown.setText(u"\U0001F44E")
+		# # print "%s" %
+		# with open(filename, 'a') as f:
+  #  			f.write(' /' + mytext)
+		# self.thumbsUp.setText(u"\U0001F44D")
+		# self.thumbsDown.setText(u"\U0001F44E")
 		with open(filename) as file:
 			for line in file:
 				line = re.match( r'^\s*(.+):\s+(.*)$', line, re.M|re.I)
@@ -388,6 +340,14 @@ class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 				elif label == 'Categories':
 					data_new = re.sub(',\s', '\n', data)
 					self.lbl_restTags.setText(data_new)
+				elif label == 'Comments':
+					data_new = re.sub('^', u"\u2022"+'\n', data)
+					data_new_new = re.sub('\s/','\n\n' + u"\u2022" + ' ', data_new)
+					self.comments.setText(data_new_new)
+
+	def close_application(self):
+			sys.exit()
+
 
 if __name__ == "__main__":
 	app = QtGui.QApplication(sys.argv)
