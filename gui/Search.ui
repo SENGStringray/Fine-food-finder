@@ -69,14 +69,19 @@
   <widget class="QLabel" name="lbl_Question">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>180</x>
      <y>30</y>
-     <width>511</width>
-     <height>61</height>
+     <width>421</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
-    <font/>
+    <font>
+     <family>Noto Serif Armenian</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -108,7 +113,11 @@
     <item>
      <widget class="QLabel" name="label_2">
       <property name="font">
-       <font/>
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -124,7 +133,11 @@
     <item>
      <widget class="QLabel" name="label_5">
       <property name="font">
-       <font/>
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -140,7 +153,12 @@
     <item>
      <widget class="QLabel" name="S">
       <property name="font">
-       <font/>
+       <font>
+        <family>Noto Serif Armenian</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -156,7 +174,11 @@
     <item>
      <widget class="QLabel" name="label_6">
       <property name="font">
-       <font/>
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -172,7 +194,11 @@
     <item>
      <widget class="QLabel" name="label_7">
       <property name="font">
-       <font/>
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -188,13 +214,17 @@
     <item>
      <widget class="QLabel" name="label_9">
       <property name="font">
-       <font/>
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
       </property>
       <property name="text">
-       <string>Sorted</string>
+       <string>Sorted by</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -204,7 +234,11 @@
     <item>
      <widget class="QLabel" name="label_8">
       <property name="font">
-       <font/>
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -220,7 +254,11 @@
     <item>
      <widget class="QLabel" name="label">
       <property name="font">
-       <font/>
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -236,7 +274,11 @@
     <item>
      <widget class="QLabel" name="label_4">
       <property name="font">
-       <font/>
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
