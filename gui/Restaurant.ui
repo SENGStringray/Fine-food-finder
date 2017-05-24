@@ -40,10 +40,11 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Serif Armenian</family>
+     <family>URW Gothic L</family>
      <pointsize>18</pointsize>
      <weight>75</weight>
      <bold>true</bold>
+     <kerning>true</kerning>
     </font>
    </property>
    <property name="styleSheet">
@@ -96,7 +97,12 @@
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>URW Gothic L</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color:white;text-transform:uppercase;</string>
@@ -202,7 +208,12 @@
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>URW Gothic L</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color:white;text-transform:uppercase;</string>
@@ -247,16 +258,16 @@
   <widget class="QLabel" name="restaurantRating">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>30</y>
-     <width>161</width>
+     <x>620</x>
+     <y>40</y>
+     <width>171</width>
      <height>50</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Noto Serif Armenian</family>
-     <pointsize>28</pointsize>
+     <family>URW Gothic L</family>
+     <pointsize>30</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -278,7 +289,12 @@
     </rect>
    </property>
    <property name="font">
-    <font/>
+    <font>
+     <family>URW Gothic L</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;text-transform:uppercase;</string>
@@ -313,7 +329,12 @@
     </rect>
    </property>
    <property name="font">
-    <font/>
+    <font>
+     <family>URW Gothic L</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color:white;text-transform:uppercase;</string>
@@ -400,6 +421,26 @@
     <string>Close All</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="reviewBtn">
+   <property name="geometry">
+    <rect>
+     <x>195</x>
+     <y>570</y>
+     <width>41</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Serif Armenian</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Done</string>
+   </property>
+  </widget>
   <zorder>thumbsDownBtn</zorder>
   <zorder>thumbsUpBtn</zorder>
   <zorder>lbl_restName</zorder>
@@ -414,6 +455,7 @@
   <zorder>label_2</zorder>
   <zorder>comments</zorder>
   <zorder>btn</zorder>
+  <zorder>reviewBtn</zorder>
  </widget>
  <resources/>
  <connections/>

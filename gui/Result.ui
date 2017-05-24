@@ -71,9 +71,9 @@
    </property>
    <property name="font">
     <font>
+     <family>URW Gothic L</family>
      <pointsize>10</pointsize>
      <weight>75</weight>
-     <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>

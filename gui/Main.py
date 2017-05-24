@@ -23,24 +23,24 @@ class Restaurant:
 				return repr((self.name, self.price, self.rating))
 
 class QCustomQWidget (QtGui.QWidget):
-    def __init__ (self, parent = None):
-        super(QCustomQWidget, self).__init__(parent)
-        self.textQVBoxLayout = QtGui.QVBoxLayout()
-        self.textUpQLabel    = QtGui.QLabel()
-        # self.textDownQLabel  = QtGui.QLabel()
-        self.textQVBoxLayout.addWidget(self.textUpQLabel)
-        # self.textQVBoxLayout.addWidget(self.textDownQLabel)
-        self.allQHBoxLayout  = QtGui.QHBoxLayout()
-        # self.iconQLabel      = QtGui.QLabel()
-        # self.allQHBoxLayout.addWidget(self.iconQLabel, 0)
-        self.allQHBoxLayout.addLayout(self.textQVBoxLayout, 0)
-        self.setLayout(self.allQHBoxLayout)
-        # setStyleSheet
-    def setTextUp (self, text):
-        self.textUpQLabel.setText(text)
+	def __init__ (self, parent = None):
+		super(QCustomQWidget, self).__init__(parent)
+		self.textQVBoxLayout = QtGui.QVBoxLayout()
+		self.textUpQLabel    = QtGui.QLabel()
+		# self.textDownQLabel  = QtGui.QLabel()
+		self.textQVBoxLayout.addWidget(self.textUpQLabel)
+		# self.textQVBoxLayout.addWidget(self.textDownQLabel)
+		self.allQHBoxLayout  = QtGui.QHBoxLayout()
+		# self.iconQLabel      = QtGui.QLabel()
+		# self.allQHBoxLayout.addWidget(self.iconQLabel, 0)
+		self.allQHBoxLayout.addLayout(self.textQVBoxLayout, 0)
+		self.setLayout(self.allQHBoxLayout)
+		# setStyleSheet
+	def setTextUp (self, text):
+		self.textUpQLabel.setText(text)
 
-    def setTextDown (self, text):
-        self.textDownQLabel.setText(text)
+	def setTextDown (self, text):
+		self.textDownQLabel.setText(text)
 
 class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 	def __init__(self):
@@ -62,7 +62,7 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.CuisineString = "Any"
 		self.DiningPartyString = "Any"
 		self.viewString = "Any" #Default is 'Any'
-  		self.btn.clicked.connect(self.close_application)
+		self.btn.clicked.connect(self.close_application)
 
 		self.ViewAny.toggled.connect(lambda:self.rbtnState_changed(self.ViewAny))
 		self.ViewScenic.toggled.connect(lambda:self.rbtnState_changed(self.ViewScenic))
@@ -110,10 +110,10 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.viewString = button.text()
 
 	def sortedchange(self,i):
-      		#print "Items in the list are :"
-      		#for count in range(self.Sorted.count()):
-         	#	print self.Sorted.itemText(count)
-      		#print "Current index",i,"selection changed ",self.Sorted.currentText()
+			#print "Items in the list are :"
+			#for count in range(self.Sorted.count()):
+			#	print self.Sorted.itemText(count)
+			#print "Current index",i,"selection changed ",self.Sorted.currentText()
 		self.SortedString = self.Sorted.currentText()
 		print (self.SortedString)
 
@@ -147,8 +147,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		self.find_matching_restaurants(searchStr, checkBoxStr, SortedString, priceStr) #, viewStr)
 		self.resultsList.itemDoubleClicked.connect(self.open_restaurant)
 		print ("checkBoxStr: " + checkBoxStr)
-
-  		self.btn.clicked.connect(self.close_application)
+		self.btn.clicked.connect(self.close_application)
 
 	def open_restaurant(self, item):
 		# print item, str(item.text())
@@ -249,21 +248,15 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 				sortedList.append(arrOfRestaurants.pop(arrOfRestaurants.index(res)))
 
 		for sorted_rest in sortedList :
-			# widget = QCustomQWidget()
-			# widget.setTextUp(sorted_rest.name)
-			# widget.setTextDown(sorted_rest.price)
 			item = QtGui.QListWidgetItem(self.resultsList)
 			item.setText(re.sub("-", ' ', sorted_rest.name))
-			# item.setSizeHint(widget.sizeHint())
 			self.resultsList.addItem(item)
-			# self.resultsList.setItemWidget(item, widget)
 
 	def handleRestaurantButton(self, name):
 		window.NewSearch = RestaurantWindow(self)
 		resName = self.sender()
-		# window.NewSearch.get_restaurant_data(resName.text())
 		window.NewSearch.get_restaurant_data(name)
-		# window.NewSearch.lbl_restName.setText("%s" % str(resName.text()))
+		window.NewSearch.set_res_name(name)
 		window.NewSearch.show()
 
 
@@ -278,24 +271,28 @@ class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 		Ui_MainWindow.__init__(self)
 		self.setupUi(self)
 		self.setStyleSheet("QWidget#Form {background-image: url(bg-2.jpg);border-image:url(bg-1.jpg);background-repeat:no-repeat;}")
+		self.restname = ''
+		self.reviewBtn.clicked.connect(lambda: self.append_comment())
+		self.btn.clicked.connect(self.close_application)
 
-		usr_review = self.usrReview.toPlainText()
-		print(usr_review)
-		# with open('somefile.txt', 'a') as f:
-  #  			f.write(mytext)
-  		self.btn.clicked.connect(self.close_application)
-  		# btn = QtGui.QPushButton('Exit', self)
-    #     btn.clicked.connect(self.close_application)
-    #     btn.resize(50, 30)
-    #     btn.move(500,20)
+	def append_comment(self):
+		comment = self.usrReview.toPlainText();
+		name = self.get_res_name()
+		# print name
+		# print comment
+		filename = "../Restaurants/%s" % name
+
+		with open(filename, 'a') as f:
+			f.write(' /' + comment)
+
+	def set_res_name(self, name):
+		self.restname = name
+
+	def get_res_name(self):
+		return self.restname
 
 	def get_restaurant_data(self, name):
 		filename = "../Restaurants/%s" % name
-		# # print "%s" %
-		# with open(filename, 'a') as f:
-  #  			f.write(' /' + mytext)
-		# self.thumbsUp.setText(u"\U0001F44D")
-		# self.thumbsDown.setText(u"\U0001F44E")
 		with open(filename) as file:
 			for line in file:
 				line = re.match( r'^\s*(.+):\s+(.*)$', line, re.M|re.I)
@@ -339,9 +336,10 @@ class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 					self.lbl_restMenu.setText(data_new)
 				elif label == 'Categories':
 					data_new = re.sub(',\s', '\n', data)
-					self.lbl_restTags.setText(data_new)
+					data_new_new = re.sub('-', ' ', data_new)
+					self.lbl_restTags.setText(data_new_new)
 				elif label == 'Comments':
-					data_new = re.sub('^', u"\u2022"+'\n', data)
+					data_new = re.sub('^', u"\u2022" + ' ', data)
 					data_new_new = re.sub('\s/','\n\n' + u"\u2022" + ' ', data_new)
 					self.comments.setText(data_new_new)
 

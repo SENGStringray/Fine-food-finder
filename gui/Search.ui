@@ -71,14 +71,14 @@
     <rect>
      <x>180</x>
      <y>30</y>
-     <width>421</width>
+     <width>431</width>
      <height>71</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Noto Serif Armenian</family>
-     <pointsize>10</pointsize>
+     <family>URW Gothic L</family>
+     <pointsize>11</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -114,7 +114,8 @@
      <widget class="QLabel" name="label_2">
       <property name="font">
        <font>
-        <family>Noto Serif Armenian</family>
+        <family>URW Gothic L</family>
+        <pointsize>9</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -134,7 +135,8 @@
      <widget class="QLabel" name="label_5">
       <property name="font">
        <font>
-        <family>Noto Serif Armenian</family>
+        <family>URW Gothic L</family>
+        <pointsize>9</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -154,7 +156,7 @@
      <widget class="QLabel" name="S">
       <property name="font">
        <font>
-        <family>Noto Serif Armenian</family>
+        <family>URW Gothic L</family>
         <pointsize>9</pointsize>
         <weight>75</weight>
         <bold>true</bold>
@@ -175,7 +177,8 @@
      <widget class="QLabel" name="label_6">
       <property name="font">
        <font>
-        <family>Noto Serif Armenian</family>
+        <family>URW Gothic L</family>
+        <pointsize>9</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -195,7 +198,8 @@
      <widget class="QLabel" name="label_7">
       <property name="font">
        <font>
-        <family>Noto Serif Armenian</family>
+        <family>URW Gothic L</family>
+        <pointsize>9</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -215,7 +219,8 @@
      <widget class="QLabel" name="label_9">
       <property name="font">
        <font>
-        <family>Noto Serif Armenian</family>
+        <family>URW Gothic L</family>
+        <pointsize>9</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -235,7 +240,8 @@
      <widget class="QLabel" name="label_8">
       <property name="font">
        <font>
-        <family>Noto Serif Armenian</family>
+        <family>URW Gothic L</family>
+        <pointsize>9</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -255,7 +261,8 @@
      <widget class="QLabel" name="label">
       <property name="font">
        <font>
-        <family>Noto Serif Armenian</family>
+        <family>URW Gothic L</family>
+        <pointsize>9</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -275,7 +282,8 @@
      <widget class="QLabel" name="label_4">
       <property name="font">
        <font>
-        <family>Noto Serif Armenian</family>
+        <family>URW Gothic L</family>
+        <pointsize>9</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
