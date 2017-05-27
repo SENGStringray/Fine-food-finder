@@ -77,9 +77,7 @@
     </rect>
    </property>
    <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
+    <font/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -624,7 +622,7 @@
       </item>
       <item>
        <property name="text">
-        <string>Price </string>
+        <string>Price</string>
        </property>
       </item>
       <item>

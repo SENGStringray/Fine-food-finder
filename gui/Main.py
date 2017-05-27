@@ -239,14 +239,14 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 
 			
 		sortedList = []
-		if (sort_option == "price") :
+		if (sort_option == "Price") :
 			while len(arrOfRestaurants) > 0:
 				res = arrOfRestaurants[0]
 				for element in arrOfRestaurants :
 					if (float(element.price) < float(res.price)) :
 						res = element
 				sortedList.append(arrOfRestaurants.pop(arrOfRestaurants.index(res)))
-		elif (sort_option == "name") :
+		elif (sort_option == "Alphabetical") :
 			while len(arrOfRestaurants) > 0:
 				res = arrOfRestaurants[0]
 				for element in arrOfRestaurants :
@@ -257,7 +257,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 			while len(arrOfRestaurants) > 0:
 				res = arrOfRestaurants[0]
 				for element in arrOfRestaurants :
-					if (float(element.rating) < float(res.rating)) :
+					if (float(element.rating) > float(res.rating)) :
 						res = element
 				sortedList.append(arrOfRestaurants.pop(arrOfRestaurants.index(res)))
 
