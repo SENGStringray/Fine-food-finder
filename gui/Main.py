@@ -298,6 +298,7 @@ class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 
 		with open(filename, 'a') as f:
 			f.write(' /' + comment)
+		self.updateComments(name)
 
 	def set_res_name(self, name):
 		self.restname = name
@@ -356,6 +357,21 @@ class RestaurantWindow(QtGui.QMainWindow, Ui_MainWindow2):
 					data_new = re.sub('^', u"\u2022" + ' ', data)
 					data_new_new = re.sub('\s/','\n\n' + u"\u2022" + ' ', data_new)
 					self.comments.setText(data_new_new)
+
+	def updateComments(self, name):
+		filename = "../%s" % name
+		with open(filename) as file:
+			for line in file:
+				line = re.match( r'^\s*(.+):\s+(.*)$', line, re.M|re.I)
+				if line.group(1):
+					label = line.group(1)
+				if line.group(2):
+					data = line.group(2)
+				if label == 'Comments':
+					data_new = re.sub('^', u"\u2022" + ' ', data)
+					data_new_new = re.sub('\s/','\n\n' + u"\u2022" + ' ', data_new)
+					self.comments.setText(data_new_new)
+					self.usrReview.setText("")
 
 	def close_application(self):
 			sys.exit()
