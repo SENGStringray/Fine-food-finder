@@ -27,7 +27,8 @@
   </property>
   <property name="font">
    <font>
-    <family>Sawasdee</family>
+    <family>MS Shell Dlg 2</family>
+    <pointsize>11</pointsize>
    </font>
   </property>
   <property name="windowTitle">
@@ -70,17 +71,14 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>30</y>
-     <width>431</width>
+     <y>50</y>
+     <width>541</width>
      <height>71</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>URW Gothic L</family>
-     <pointsize>11</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="autoFillBackground">
@@ -99,7 +97,7 @@
      <x>10</x>
      <y>120</y>
      <width>151</width>
-     <height>421</height>
+     <height>461</height>
     </rect>
    </property>
    <property name="font">
@@ -113,12 +111,7 @@
     <item>
      <widget class="QLabel" name="label_2">
       <property name="font">
-       <font>
-        <family>URW Gothic L</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+       <font/>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -134,12 +127,7 @@
     <item>
      <widget class="QLabel" name="label_5">
       <property name="font">
-       <font>
-        <family>URW Gothic L</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+       <font/>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -155,12 +143,7 @@
     <item>
      <widget class="QLabel" name="S">
       <property name="font">
-       <font>
-        <family>URW Gothic L</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+       <font/>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -176,12 +159,7 @@
     <item>
      <widget class="QLabel" name="label_6">
       <property name="font">
-       <font>
-        <family>URW Gothic L</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+       <font/>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -197,12 +175,7 @@
     <item>
      <widget class="QLabel" name="label_7">
       <property name="font">
-       <font>
-        <family>URW Gothic L</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+       <font/>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -218,12 +191,7 @@
     <item>
      <widget class="QLabel" name="label_9">
       <property name="font">
-       <font>
-        <family>URW Gothic L</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+       <font/>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -239,12 +207,7 @@
     <item>
      <widget class="QLabel" name="label_8">
       <property name="font">
-       <font>
-        <family>URW Gothic L</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+       <font/>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -260,12 +223,7 @@
     <item>
      <widget class="QLabel" name="label">
       <property name="font">
-       <font>
-        <family>URW Gothic L</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+       <font/>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -281,18 +239,29 @@
     <item>
      <widget class="QLabel" name="label_4">
       <property name="font">
-       <font>
-        <family>URW Gothic L</family>
-        <pointsize>9</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+       <font/>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
       </property>
       <property name="text">
        <string>Restaurant Name</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_10">
+      <property name="font">
+       <font/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;text-transform:uppercase;</string>
+      </property>
+      <property name="text">
+       <string>Location</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -673,7 +642,7 @@
      <x>170</x>
      <y>440</y>
      <width>531</width>
-     <height>111</height>
+     <height>141</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -717,15 +686,32 @@
       </property>
      </widget>
     </item>
+    <item>
+     <widget class="QLineEdit" name="bar_Location">
+      <property name="font">
+       <font>
+        <family>Noto Serif Armenian</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QWidget" name="view" native="true">
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>410</y>
+     <y>420</y>
      <width>511</width>
-     <height>31</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="font">
@@ -742,7 +728,7 @@
     <property name="geometry">
      <rect>
       <x>9</x>
-      <y>9</y>
+      <y>0</y>
       <width>119</width>
       <height>16</height>
      </rect>
@@ -771,7 +757,7 @@
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>9</y>
+      <y>0</y>
       <width>119</width>
       <height>16</height>
      </rect>
@@ -794,7 +780,7 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>9</y>
+      <y>0</y>
       <width>118</width>
       <height>16</height>
      </rect>
@@ -817,7 +803,7 @@
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>9</y>
+      <y>0</y>
       <width>119</width>
       <height>16</height>
      </rect>

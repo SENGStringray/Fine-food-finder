@@ -52,8 +52,10 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.btn_Search.clicked.connect(self.handleSearchButton)
 		self.bar_Search.textChanged.connect(self.handleSearchTextChanged)
 		self.bar_Price.textChanged.connect(self.handlePriceTextChanged)
+		self.bar_Location.textChanged.connect(self.handleLocationTextChanged)
 		self.searchString = ""
 		self.priceString = ""
+		self.locationString = ""
 		self.checkBoxStr = ""
 		self.SortedString = "Rating"
 		self.ExtraString = "Any"
@@ -83,20 +85,22 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.bar_Price.setValidator(validator)
 
 	def handleSearchButton(self):
-		#print "Text typed: ", self.searchString
 		self.checkBoxStr = self.ExtraString + " " + self.DietaryString + " " + self.StyleString + " " + self.CuisineString + " " + self.DiningPartyString + " " + self.viewString;
-		window.NewSearch = ResultWindow(self.checkBoxStr, self.SortedString, self.searchString, self.priceString, self)
+		window.NewSearch = ResultWindow(self.checkBoxStr, self.SortedString, self.searchString, self.priceString, self.locationString, self)
 		self.searchString = ""
 		window.NewSearch.show()
 
 	def handleSearchTextChanged(self):
 		if (str(self.bar_Search.text()) != ""):
 			self.searchString = str(self.bar_Search.text())
-		#print "Text bound: ", self.searchString
 
 	def handlePriceTextChanged(self):
 		if (str(self.bar_Price.text()) != ""):
 			self.priceString = str(self.bar_Price.text())
+
+	def handleLocationTextChanged(self):
+		if (str(self.bar_Location.text()) != ""):
+			self.locationString = str(self.bar_Location.text())
 
 	def home(self):
 		extractAction = QtGui.QAction(QtGui.QIcon('Icon.png'), 'Flee the Scene', self)
@@ -140,11 +144,11 @@ class SearchWindow(QtGui.QMainWindow, Ui_MainWindow):
 
 
 class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
-	def __init__(self, checkBoxStr, SortedString, searchStr, priceStr, parent=None):
+	def __init__(self, checkBoxStr, SortedString, searchStr, priceStr, locationStr, parent=None):
 		super(ResultWindow, self).__init__(parent)
 		self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 		self.setupUi(self)
-		self.find_matching_restaurants(searchStr, checkBoxStr, SortedString, priceStr) #, viewStr)
+		self.find_matching_restaurants(searchStr, checkBoxStr, SortedString, priceStr, locationStr)
 		self.resultsList.itemDoubleClicked.connect(self.open_restaurant)
 		print ("checkBoxStr: " + checkBoxStr)
 		self.btn.clicked.connect(self.close_application)
@@ -154,20 +158,22 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		self.handleRestaurantButton(re.sub(' ', '-',str(item.text())))
 
 
-	def find_matching_restaurants(self, searchString, checkboxString, sortedString, priceString):#, viewString):
+	def find_matching_restaurants(self, searchString, checkboxString, sortedString, priceString, locationString):
 		print ("searchBox: " + searchString)
 		print ("price: " + priceString)
+		print ("location: " + locationString)
 		print ("checkBoxes: " + checkboxString)
 		print ("sort by: " + sortedString)
-		#print ("view: " + viewString)
 		
 		searchString = str(searchString)
 		checkboxString = str(checkboxString)
+		locationString = str(locationString)
 		priceString = str(priceString)
 		sort_option = str(sortedString)
 		
 		path = "../Restaurants/*"
 		searchString = searchString.rstrip()
+		locationString = locationString.rstrip()
 		checkboxString = checkboxString.rstrip()
 		arrayOfSelectedCat = checkboxString.split() # spilt the checkboxString
 		
@@ -215,7 +221,15 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 					match = re.search(searchString, content, re.I)
 					if (match):
 						search_found = 1
-			if (search_found and category_found) :
+			location_found = 0
+			if (search_found == 1) :
+				if (locationString == "") :
+					location_found = 1
+				else :
+					match = re.search(locationString, content, re.I)
+					if (match):
+						location_found = 1
+			if (search_found and category_found and location_found) :
 				if (priceString != "" and float(rest_object.price) <= float(priceString)):
 					arrOfRestaurants.append(rest_object)
 				elif (priceString == "") :
