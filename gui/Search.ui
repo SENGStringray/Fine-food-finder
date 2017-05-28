@@ -70,16 +70,16 @@
   <widget class="QLabel" name="lbl_Question">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>160</x>
      <y>20</y>
-     <width>431</width>
+     <width>461</width>
      <height>81</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>URW Gothic L</family>
-     <pointsize>11</pointsize>
+     <pointsize>12</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -372,7 +372,7 @@
       </item>
       <item>
        <property name="text">
-        <string>Take-away</string>
+        <string>Takeaway</string>
        </property>
       </item>
       <item>

@@ -170,7 +170,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 		locationString = str(locationString)
 		priceString = str(priceString)
 		sort_option = str(sortedString)
-		
+				
 		path = "../Restaurants/*"
 		searchString = searchString.rstrip()
 		locationString = locationString.rstrip()
@@ -184,6 +184,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 			content = f.read()
 			# initialising the Restuarant object
 			name = re.sub(r'.*?/', '', fileN)
+			# print(name)
 			m = re.search(r"Rating:\s*([0-9.]+)", content, re.I)
 			if (m) :
 				rating = m.group(1)
@@ -200,6 +201,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 				continue
 
 			rest_object = Restaurant(name, price, rating)
+			# print(rest_object.name)
 			# searching based on checkbox String
 			# intersection of checked boxes
 
@@ -262,6 +264,7 @@ class ResultWindow(QtGui.QMainWindow, Ui_MainWindow1):
 				sortedList.append(arrOfRestaurants.pop(arrOfRestaurants.index(res)))
 
 		for sorted_rest in sortedList :
+			# print(sorted_rest.name)
 			item = QtGui.QListWidgetItem(self.resultsList)
 			item.setText(re.sub("-", ' ', sorted_rest.name))
 			self.resultsList.addItem(item)

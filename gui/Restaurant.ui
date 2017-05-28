@@ -41,10 +41,9 @@
    <property name="font">
     <font>
      <family>URW Gothic L</family>
-     <pointsize>18</pointsize>
+     <pointsize>16</pointsize>
      <weight>75</weight>
      <bold>true</bold>
-     <kerning>true</kerning>
     </font>
    </property>
    <property name="styleSheet">
@@ -99,7 +98,6 @@
     <property name="font">
      <font>
       <family>URW Gothic L</family>
-      <pointsize>10</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -178,6 +176,12 @@
      <italic>false</italic>
     </font>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="maxVisibleItems">
+    <number>7</number>
+   </property>
    <item>
     <property name="text">
      <string>Trading Hours</string>
@@ -210,7 +214,6 @@
     <property name="font">
      <font>
       <family>URW Gothic L</family>
-      <pointsize>10</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -291,7 +294,6 @@
    <property name="font">
     <font>
      <family>URW Gothic L</family>
-     <pointsize>10</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -331,7 +333,6 @@
    <property name="font">
     <font>
      <family>URW Gothic L</family>
-     <pointsize>10</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
