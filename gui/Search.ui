@@ -71,13 +71,18 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>50</y>
-     <width>541</width>
-     <height>71</height>
+     <y>20</y>
+     <width>431</width>
+     <height>81</height>
     </rect>
    </property>
    <property name="font">
-    <font/>
+    <font>
+     <family>URW Gothic L</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -92,8 +97,8 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>120</y>
+     <x>30</x>
+     <y>100</y>
      <width>151</width>
      <height>461</height>
     </rect>
@@ -109,7 +114,11 @@
     <item>
      <widget class="QLabel" name="label_2">
       <property name="font">
-       <font/>
+       <font>
+        <family>URW Gothic L</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -125,7 +134,11 @@
     <item>
      <widget class="QLabel" name="label_5">
       <property name="font">
-       <font/>
+       <font>
+        <family>URW Gothic L</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -141,7 +154,11 @@
     <item>
      <widget class="QLabel" name="S">
       <property name="font">
-       <font/>
+       <font>
+        <family>URW Gothic L</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -157,7 +174,11 @@
     <item>
      <widget class="QLabel" name="label_6">
       <property name="font">
-       <font/>
+       <font>
+        <family>URW Gothic L</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -173,7 +194,11 @@
     <item>
      <widget class="QLabel" name="label_7">
       <property name="font">
-       <font/>
+       <font>
+        <family>URW Gothic L</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -189,7 +214,11 @@
     <item>
      <widget class="QLabel" name="label_9">
       <property name="font">
-       <font/>
+       <font>
+        <family>URW Gothic L</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -205,7 +234,11 @@
     <item>
      <widget class="QLabel" name="label_8">
       <property name="font">
-       <font/>
+       <font>
+        <family>URW Gothic L</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -221,7 +254,11 @@
     <item>
      <widget class="QLabel" name="label">
       <property name="font">
-       <font/>
+       <font>
+        <family>URW Gothic L</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -237,7 +274,11 @@
     <item>
      <widget class="QLabel" name="label_4">
       <property name="font">
-       <font/>
+       <font>
+        <family>URW Gothic L</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -253,7 +294,11 @@
     <item>
      <widget class="QLabel" name="label_10">
       <property name="font">
-       <font/>
+       <font>
+        <family>URW Gothic L</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">color:white;text-transform:uppercase;</string>
@@ -271,8 +316,8 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>110</y>
+     <x>190</x>
+     <y>90</y>
      <width>531</width>
      <height>301</height>
     </rect>
@@ -637,10 +682,10 @@
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>440</y>
+     <x>190</x>
+     <y>420</y>
      <width>531</width>
-     <height>141</height>
+     <height>151</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -706,8 +751,8 @@
   <widget class="QWidget" name="view" native="true">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>420</y>
+     <x>200</x>
+     <y>390</y>
      <width>511</width>
      <height>21</height>
     </rect>
