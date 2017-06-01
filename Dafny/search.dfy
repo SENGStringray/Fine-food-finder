@@ -1,26 +1,32 @@
-class restaurant{
-	var name: real, price: real, rating: rating
-	require fileN != null
-	new arr0Restaurants[]
-	Method print(){Enter search String}
-	Method sys.stdin.readline(){return searchString;}
-	Method print(){Enter search String}
-	Method searchString.rstrip(){return ;}
-	Method print(){Enter search categories, or press cntrl+d}
-	forall fileN{
-		Method open(){ return f;}
-		Method f.read{return content;}
-		Method re.search(searchString, content){return match;}
-		if match then   Method arrOfRestuarants.apphend(fileN){return ;} else Mehtod close()
-	}
-	for fileN | fileN in ArrOfRestuarants{
-		Method print(fileN){return ;}
-	}
-
-
-	if sort_option = "price" {Method sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.name)}
-	elsif sort_option = "price"{Method sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.price)}
-	else {Method sorted(arrOfRestuarants, key=lambda Restuarant: Restuarant.rating)}
-	forall rest | arrOfRestuarants {Method print() {print rest.name} }
+ method Search ()
+{  
+ var content: seq<int>;
+ var name: int;
+ var rating: int;
+ var price: int;
+ assume name in content;
+  while (name != content[0])
+  invariant name in content;
+  decreases |content|
+  {
+    content := content[1..]; 
+  }
+  assert name==content[0];
+   assume rating in content;
+  while (rating != content[0])
+  invariant rating in content;
+  decreases |content|
+  {
+    content := content[1..]; 
+  }
+  assert rating==content[0];
+  assume price in content;
+  while (price != content[0])
+  invariant price in content;
+  decreases |content|
+  {
+    content := content[1..]; 
+  }
+  assert price==content[0];
 
 }
